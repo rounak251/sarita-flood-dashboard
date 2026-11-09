@@ -1,0 +1,695 @@
+{
+  "aoi": {
+    "name": "kosi",
+    "bbox_lonlat": [
+      85.6,
+      25.55,
+      87.2,
+      26.75
+    ],
+    "crs": "EPSG:32645",
+    "pixel_m": 10.0,
+    "width": 16075,
+    "height": 13367,
+    "area_km2": 21487.4525
+  },
+  "method": {
+    "threshold": 0.5,
+    "mmu_px": 25,
+    "mmu_km2": 0.0025,
+    "reference_date": "2024-09-27",
+    "permanent_water": "JRC GSW occurrence >= 50%"
+  },
+  "dates": {
+    "2024-09-15": {
+      "observed_km2": 21487.4525,
+      "water_km2": 353.3123,
+      "permanent_water_km2": 87.0406,
+      "inundation_km2": 318.0238
+    },
+    "2024-09-27": {
+      "observed_km2": 21487.452400000002,
+      "water_km2": 220.55790000000002,
+      "permanent_water_km2": 87.0406,
+      "inundation_km2": 201.9257
+    },
+    "2024-10-09": {
+      "observed_km2": 21487.441000000003,
+      "water_km2": 666.1043000000001,
+      "permanent_water_km2": 87.0404,
+      "inundation_km2": 626.4033000000001,
+      "flood_km2": 466.74010000000004,
+      "flood_cropland_km2": 348.24530000000004,
+      "flood_builtup_km2": 0.9531000000000001,
+      "people_exposed": 467655.89251956134
+    },
+    "2024-10-21": {
+      "observed_km2": 21487.4525,
+      "water_km2": 310.5932,
+      "permanent_water_km2": 87.0406,
+      "inundation_km2": 276.4918,
+      "flood_km2": 146.88590000000002,
+      "flood_cropland_km2": 72.1507,
+      "flood_builtup_km2": 0.6244000000000001,
+      "people_exposed": 138260.4164233545
+    },
+    "2024-11-02": {
+      "observed_km2": 21487.449,
+      "water_km2": 179.0548,
+      "permanent_water_km2": 87.0406,
+      "inundation_km2": 160.2081,
+      "flood_km2": 60.6126,
+      "flood_cropland_km2": 28.157300000000003,
+      "flood_builtup_km2": 0.45530000000000004,
+      "people_exposed": 66906.67398657727
+    }
+  },
+  "districts": [
+    {
+      "district": "Darbhanga",
+      "area_km2": 2471.6,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 2471.61,
+          "coverage": 1.0,
+          "flood_km2": 156.73,
+          "flood_pct_of_observed": 6.34,
+          "flood_cropland_km2": 145.32,
+          "flood_builtup_km2": 0.14,
+          "people_exposed": 135690,
+          "population_observed": 4419129,
+          "population_total": 4419129
+        },
+        "2024-10-21": {
+          "observed_km2": 2471.61,
+          "coverage": 1.0,
+          "flood_km2": 21.29,
+          "flood_pct_of_observed": 0.86,
+          "flood_cropland_km2": 15.93,
+          "flood_builtup_km2": 0.06,
+          "people_exposed": 22893,
+          "population_observed": 4419129,
+          "population_total": 4419129
+        },
+        "2024-11-02": {
+          "observed_km2": 2471.61,
+          "coverage": 1.0,
+          "flood_km2": 6.87,
+          "flood_pct_of_observed": 0.28,
+          "flood_cropland_km2": 3.21,
+          "flood_builtup_km2": 0.04,
+          "people_exposed": 11147,
+          "population_observed": 4419129,
+          "population_total": 4419129
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 43.83,
+        "2024-09-27": 28.55,
+        "2024-10-09": 183.14,
+        "2024-10-21": 44.2,
+        "2024-11-02": 24.7
+      }
+    },
+    {
+      "district": "Saharsa",
+      "area_km2": 1590.3,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 1590.31,
+          "coverage": 1.0,
+          "flood_km2": 62.87,
+          "flood_pct_of_observed": 3.95,
+          "flood_cropland_km2": 37.56,
+          "flood_builtup_km2": 0.14,
+          "people_exposed": 58134,
+          "population_observed": 2287721,
+          "population_total": 2287727
+        },
+        "2024-10-21": {
+          "observed_km2": 1590.31,
+          "coverage": 1.0,
+          "flood_km2": 30.24,
+          "flood_pct_of_observed": 1.9,
+          "flood_cropland_km2": 14.89,
+          "flood_builtup_km2": 0.07,
+          "people_exposed": 28855,
+          "population_observed": 2287727,
+          "population_total": 2287727
+        },
+        "2024-11-02": {
+          "observed_km2": 1590.31,
+          "coverage": 1.0,
+          "flood_km2": 12.76,
+          "flood_pct_of_observed": 0.8,
+          "flood_cropland_km2": 7.17,
+          "flood_builtup_km2": 0.04,
+          "people_exposed": 12112,
+          "population_observed": 2287726,
+          "population_total": 2287727
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 68.28,
+        "2024-09-27": 40.41,
+        "2024-10-09": 94.02,
+        "2024-10-21": 52.17,
+        "2024-11-02": 29.39
+      }
+    },
+    {
+      "district": "Muzaffarpur",
+      "area_km2": 3133.1,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 425.5,
+          "coverage": 0.136,
+          "flood_km2": 56.12,
+          "flood_pct_of_observed": 13.19,
+          "flood_cropland_km2": 53.24,
+          "flood_builtup_km2": 0.02,
+          "people_exposed": 67853,
+          "population_observed": 649713,
+          "population_total": 1426544
+        },
+        "2024-10-21": {
+          "observed_km2": 425.5,
+          "coverage": 0.136,
+          "flood_km2": 12.74,
+          "flood_pct_of_observed": 2.99,
+          "flood_cropland_km2": 11.35,
+          "flood_builtup_km2": 0.01,
+          "people_exposed": 14894,
+          "population_observed": 649713,
+          "population_total": 1426544
+        },
+        "2024-11-02": {
+          "observed_km2": 425.5,
+          "coverage": 0.136,
+          "flood_km2": 4.94,
+          "flood_pct_of_observed": 1.16,
+          "flood_cropland_km2": 3.89,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 7195,
+          "population_observed": 649713,
+          "population_total": 1426544
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 20.25,
+        "2024-09-27": 15.02,
+        "2024-10-09": 70.99,
+        "2024-10-21": 26.8,
+        "2024-11-02": 15.82
+      }
+    },
+    {
+      "district": "Samastipur",
+      "area_km2": 2698.7,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 2473.78,
+          "coverage": 0.917,
+          "flood_km2": 46.85,
+          "flood_pct_of_observed": 1.89,
+          "flood_cropland_km2": 35.55,
+          "flood_builtup_km2": 0.13,
+          "people_exposed": 69287,
+          "population_observed": 5063472,
+          "population_total": 5350249
+        },
+        "2024-10-21": {
+          "observed_km2": 2473.78,
+          "coverage": 0.917,
+          "flood_km2": 12.54,
+          "flood_pct_of_observed": 0.51,
+          "flood_cropland_km2": 7.55,
+          "flood_builtup_km2": 0.04,
+          "people_exposed": 18373,
+          "population_observed": 5063483,
+          "population_total": 5350249
+        },
+        "2024-11-02": {
+          "observed_km2": 2473.78,
+          "coverage": 0.917,
+          "flood_km2": 4.87,
+          "flood_pct_of_observed": 0.2,
+          "flood_cropland_km2": 2.17,
+          "flood_builtup_km2": 0.03,
+          "people_exposed": 8275,
+          "population_observed": 5063481,
+          "population_total": 5350249
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 25.85,
+        "2024-09-27": 28.93,
+        "2024-10-09": 68.04,
+        "2024-10-21": 29.86,
+        "2024-11-02": 18.95
+      }
+    },
+    {
+      "district": "Supaul",
+      "area_km2": 2422.2,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 2422.17,
+          "coverage": 1.0,
+          "flood_km2": 38.48,
+          "flood_pct_of_observed": 1.59,
+          "flood_cropland_km2": 11.11,
+          "flood_builtup_km2": 0.02,
+          "people_exposed": 24831,
+          "population_observed": 2851205,
+          "population_total": 2851205
+        },
+        "2024-10-21": {
+          "observed_km2": 2422.17,
+          "coverage": 1.0,
+          "flood_km2": 29.34,
+          "flood_pct_of_observed": 1.21,
+          "flood_cropland_km2": 7.38,
+          "flood_builtup_km2": 0.01,
+          "people_exposed": 17862,
+          "population_observed": 2851205,
+          "population_total": 2851205
+        },
+        "2024-11-02": {
+          "observed_km2": 2422.17,
+          "coverage": 1.0,
+          "flood_km2": 7.95,
+          "flood_pct_of_observed": 0.33,
+          "flood_cropland_km2": 2.52,
+          "flood_builtup_km2": 0.01,
+          "people_exposed": 5728,
+          "population_observed": 2851205,
+          "population_total": 2851205
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 50.67,
+        "2024-09-27": 18.47,
+        "2024-10-09": 50.54,
+        "2024-10-21": 39.44,
+        "2024-11-02": 14.13
+      }
+    },
+    {
+      "district": "Khagaria",
+      "area_km2": 1499.5,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 623.07,
+          "coverage": 0.416,
+          "flood_km2": 38.38,
+          "flood_pct_of_observed": 6.16,
+          "flood_cropland_km2": 25.39,
+          "flood_builtup_km2": 0.01,
+          "people_exposed": 30706,
+          "population_observed": 816146,
+          "population_total": 1562395
+        },
+        "2024-10-21": {
+          "observed_km2": 623.07,
+          "coverage": 0.416,
+          "flood_km2": 11.39,
+          "flood_pct_of_observed": 1.83,
+          "flood_cropland_km2": 5.83,
+          "flood_builtup_km2": 0.01,
+          "people_exposed": 9983,
+          "population_observed": 816146,
+          "population_total": 1562395
+        },
+        "2024-11-02": {
+          "observed_km2": 623.07,
+          "coverage": 0.416,
+          "flood_km2": 4.65,
+          "flood_pct_of_observed": 0.75,
+          "flood_cropland_km2": 3.47,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 4151,
+          "population_observed": 816146,
+          "population_total": 1562395
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 31.7,
+        "2024-09-27": 18.55,
+        "2024-10-09": 55.79,
+        "2024-10-21": 27.14,
+        "2024-11-02": 17.54
+      }
+    },
+    {
+      "district": "Madhubani",
+      "area_km2": 3497.1,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 3497.08,
+          "coverage": 1.0,
+          "flood_km2": 28.7,
+          "flood_pct_of_observed": 0.82,
+          "flood_cropland_km2": 17.98,
+          "flood_builtup_km2": 0.08,
+          "people_exposed": 40657,
+          "population_observed": 5040067,
+          "population_total": 5040067
+        },
+        "2024-10-21": {
+          "observed_km2": 3497.08,
+          "coverage": 1.0,
+          "flood_km2": 11.06,
+          "flood_pct_of_observed": 0.32,
+          "flood_cropland_km2": 3.47,
+          "flood_builtup_km2": 0.08,
+          "people_exposed": 15952,
+          "population_observed": 5040067,
+          "population_total": 5040067
+        },
+        "2024-11-02": {
+          "observed_km2": 3497.08,
+          "coverage": 1.0,
+          "flood_km2": 6.19,
+          "flood_pct_of_observed": 0.18,
+          "flood_cropland_km2": 1.7,
+          "flood_builtup_km2": 0.05,
+          "people_exposed": 10200,
+          "population_observed": 5040067,
+          "population_total": 5040067
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 30.02,
+        "2024-09-27": 19.67,
+        "2024-10-09": 44.67,
+        "2024-10-21": 25.14,
+        "2024-11-02": 17.09
+      }
+    },
+    {
+      "district": "Sitamarhi",
+      "area_km2": 2115.5,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 779.09,
+          "coverage": 0.368,
+          "flood_km2": 13.05,
+          "flood_pct_of_observed": 1.67,
+          "flood_cropland_km2": 11.34,
+          "flood_builtup_km2": 0.1,
+          "people_exposed": 21421,
+          "population_observed": 1604345,
+          "population_total": 2628046
+        },
+        "2024-10-21": {
+          "observed_km2": 779.09,
+          "coverage": 0.368,
+          "flood_km2": 2.19,
+          "flood_pct_of_observed": 0.28,
+          "flood_cropland_km2": 1.26,
+          "flood_builtup_km2": 0.08,
+          "people_exposed": 4451,
+          "population_observed": 1604345,
+          "population_total": 2628046
+        },
+        "2024-11-02": {
+          "observed_km2": 779.09,
+          "coverage": 0.368,
+          "flood_km2": 1.47,
+          "flood_pct_of_observed": 0.19,
+          "flood_cropland_km2": 0.67,
+          "flood_builtup_km2": 0.08,
+          "people_exposed": 3292,
+          "population_observed": 1604345,
+          "population_total": 2628046
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 4.07,
+        "2024-09-27": 2.06,
+        "2024-10-09": 15.05,
+        "2024-10-21": 4.13,
+        "2024-11-02": 3.3
+      }
+    },
+    {
+      "district": "Begusarai",
+      "area_km2": 2070.8,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 684.92,
+          "coverage": 0.331,
+          "flood_km2": 5.79,
+          "flood_pct_of_observed": 0.84,
+          "flood_cropland_km2": 3.99,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 12916,
+          "population_observed": 1329345,
+          "population_total": 2383814
+        },
+        "2024-10-21": {
+          "observed_km2": 684.92,
+          "coverage": 0.331,
+          "flood_km2": 1.45,
+          "flood_pct_of_observed": 0.21,
+          "flood_cropland_km2": 0.62,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 3210,
+          "population_observed": 1329345,
+          "population_total": 2383814
+        },
+        "2024-11-02": {
+          "observed_km2": 684.92,
+          "coverage": 0.331,
+          "flood_km2": 1.31,
+          "flood_pct_of_observed": 0.19,
+          "flood_cropland_km2": 0.43,
+          "flood_builtup_km2": 0.01,
+          "people_exposed": 3206,
+          "population_observed": 1329345,
+          "population_total": 2383814
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 15.63,
+        "2024-09-27": 18.34,
+        "2024-10-09": 18.02,
+        "2024-10-21": 7.21,
+        "2024-11-02": 5.41
+      }
+    },
+    {
+      "district": "Madhepura",
+      "area_km2": 2072.3,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 1782.95,
+          "coverage": 0.86,
+          "flood_km2": 4.27,
+          "flood_pct_of_observed": 0.24,
+          "flood_cropland_km2": 2.55,
+          "flood_builtup_km2": 0.01,
+          "people_exposed": 5050,
+          "population_observed": 2333445,
+          "population_total": 2764941
+        },
+        "2024-10-21": {
+          "observed_km2": 1782.96,
+          "coverage": 0.86,
+          "flood_km2": 0.83,
+          "flood_pct_of_observed": 0.05,
+          "flood_cropland_km2": 0.31,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 1059,
+          "population_observed": 2333447,
+          "population_total": 2764941
+        },
+        "2024-11-02": {
+          "observed_km2": 1782.95,
+          "coverage": 0.86,
+          "flood_km2": 0.75,
+          "flood_pct_of_observed": 0.04,
+          "flood_cropland_km2": 0.41,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 967,
+          "population_observed": 2333446,
+          "population_total": 2764941
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 2.83,
+        "2024-09-27": 2.41,
+        "2024-10-09": 6.25,
+        "2024-10-21": 2.4,
+        "2024-11-02": 2.01
+      }
+    },
+    {
+      "district": "Araria",
+      "area_km2": 2772.6,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 660.47,
+          "coverage": 0.238,
+          "flood_km2": 0.47,
+          "flood_pct_of_observed": 0.07,
+          "flood_cropland_km2": 0.33,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 625,
+          "population_observed": 832409,
+          "population_total": 1441633
+        },
+        "2024-10-21": {
+          "observed_km2": 660.47,
+          "coverage": 0.238,
+          "flood_km2": 0.08,
+          "flood_pct_of_observed": 0.01,
+          "flood_cropland_km2": 0.03,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 101,
+          "population_observed": 832409,
+          "population_total": 1441633
+        },
+        "2024-11-02": {
+          "observed_km2": 660.47,
+          "coverage": 0.238,
+          "flood_km2": 0.02,
+          "flood_pct_of_observed": 0.0,
+          "flood_cropland_km2": 0.01,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 22,
+          "population_observed": 832409,
+          "population_total": 1441633
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 0.38,
+        "2024-09-27": 0.7,
+        "2024-10-09": 0.6,
+        "2024-10-21": 0.17,
+        "2024-11-02": 0.03
+      }
+    },
+    {
+      "district": "Purnia",
+      "area_km2": 3162.0,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 676.66,
+          "coverage": 0.214,
+          "flood_km2": 0.28,
+          "flood_pct_of_observed": 0.04,
+          "flood_cropland_km2": 0.11,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 409,
+          "population_observed": 832897,
+          "population_total": 1379674
+        },
+        "2024-10-21": {
+          "observed_km2": 676.66,
+          "coverage": 0.214,
+          "flood_km2": 0.38,
+          "flood_pct_of_observed": 0.06,
+          "flood_cropland_km2": 0.16,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 539,
+          "population_observed": 832898,
+          "population_total": 1379674
+        },
+        "2024-11-02": {
+          "observed_km2": 676.66,
+          "coverage": 0.214,
+          "flood_km2": 0.28,
+          "flood_pct_of_observed": 0.04,
+          "flood_cropland_km2": 0.13,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 441,
+          "population_observed": 832898,
+          "population_total": 1379674
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 0.23,
+        "2024-09-27": 0.22,
+        "2024-10-09": 0.36,
+        "2024-10-21": 0.47,
+        "2024-11-02": 0.38
+      }
+    },
+    {
+      "district": "Vaishali",
+      "area_km2": 2048.3,
+      "dates": {
+        "2024-10-09": {
+          "observed_km2": 41.26,
+          "coverage": 0.02,
+          "flood_km2": 0.04,
+          "flood_pct_of_observed": 0.09,
+          "flood_cropland_km2": 0.02,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 78,
+          "population_observed": 104871,
+          "population_total": 872602
+        },
+        "2024-10-21": {
+          "observed_km2": 41.26,
+          "coverage": 0.02,
+          "flood_km2": 0.04,
+          "flood_pct_of_observed": 0.1,
+          "flood_cropland_km2": 0.03,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 88,
+          "population_observed": 104871,
+          "population_total": 872602
+        },
+        "2024-11-02": {
+          "observed_km2": 41.26,
+          "coverage": 0.02,
+          "flood_km2": 0.08,
+          "flood_pct_of_observed": 0.18,
+          "flood_cropland_km2": 0.04,
+          "flood_builtup_km2": 0.0,
+          "people_exposed": 170,
+          "population_observed": 104871,
+          "population_total": 872602
+        }
+      },
+      "inundation_km2": {
+        "2024-09-15": 0.06,
+        "2024-09-27": 0.05,
+        "2024-10-09": 0.08,
+        "2024-10-21": 0.08,
+        "2024-11-02": 0.1
+      }
+    }
+  ],
+  "noise_floor": {
+    "pair": [
+      "2024-09-15",
+      "2024-09-27"
+    ],
+    "new_water_km2": 39.903400000000005,
+    "receded_water_km2": 156.00150000000002,
+    "observed_km2": 21487.452400000002,
+    "new_water_pct_of_observed": 0.1857055888114498
+  },
+  "max_extent_km2": 502.0941,
+  "duration_km2": {
+    "flooded_on_1_of_3_dates": 369.9407,
+    "flooded_on_2_of_3_dates": 92.1623,
+    "flooded_on_3_of_3_dates": 39.9911
+  },
+  "landcover_classes": {
+    "40": "Cropland",
+    "50": "Built-up"
+  },
+  "sources": {
+    "sentinel1": "Copernicus Sentinel-1 (ESA), RTC by Microsoft Planetary Computer, relative orbit 121 descending",
+    "districts": "geoBoundaries gbOpen IND ADM2 (Runfola et al. 2020), ODbL 1.0",
+    "worldcover": "ESA WorldCover 10 m 2021 v200 (CC BY 4.0)",
+    "jrc": "JRC Global Surface Water v1.3 occurrence (Pekel et al. 2016)",
+    "worldpop": "WorldPop 2020 UN-adjusted 1 km (CC BY 4.0)"
+  },
+  "runtime_s": 32.8
+}

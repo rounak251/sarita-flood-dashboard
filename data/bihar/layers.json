@@ -1,0 +1,577 @@
+{
+ "mock": false,
+ "dates": [
+  "2024-09-15",
+  "2024-09-27",
+  "2024-10-09",
+  "2024-10-21",
+  "2024-11-02"
+ ],
+ "post_dates": [
+  "2024-10-09",
+  "2024-10-21",
+  "2024-11-02"
+ ],
+ "reference_date": "2024-09-27",
+ "bounds": [
+  [
+   25.5430631,
+   85.5855758
+  ],
+  [
+   26.7569887,
+   87.2022616
+  ]
+ ],
+ "layers": [
+  {
+   "id": "sar_2024-09-15",
+   "kind": "sar",
+   "date": "2024-09-15",
+   "url": "data/bihar/layers/sar_2024-09-15.jpg",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Sentinel-1 VV backscatter",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "min": "-25 dB",
+    "max": "0 dB"
+   },
+   "attribution": "Contains modified Copernicus Sentinel data 2024"
+  },
+  {
+   "id": "water_2024-09-15",
+   "kind": "water",
+   "date": "2024-09-15",
+   "url": "data/bihar/layers/water_2024-09-15.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Water extent (SARITA model)",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Water"
+    }
+   ]
+  },
+  {
+   "id": "uncertainty_2024-09-15",
+   "kind": "uncertainty",
+   "date": "2024-09-15",
+   "url": "data/bihar/layers/uncertainty_2024-09-15.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Model uncertainty (predictive entropy)",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#3B0F70",
+     "#8C2981",
+     "#DE4968",
+     "#FE9F6D",
+     "#FCFDBF"
+    ],
+    "min": "0 bits (certain)",
+    "max": "1 bit (p = 0.5)"
+   }
+  },
+  {
+   "id": "sar_2024-09-27",
+   "kind": "sar",
+   "date": "2024-09-27",
+   "url": "data/bihar/layers/sar_2024-09-27.jpg",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Sentinel-1 VV backscatter",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "min": "-25 dB",
+    "max": "0 dB"
+   },
+   "attribution": "Contains modified Copernicus Sentinel data 2024"
+  },
+  {
+   "id": "water_2024-09-27",
+   "kind": "water",
+   "date": "2024-09-27",
+   "url": "data/bihar/layers/water_2024-09-27.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Water extent (SARITA model)",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Water"
+    }
+   ]
+  },
+  {
+   "id": "uncertainty_2024-09-27",
+   "kind": "uncertainty",
+   "date": "2024-09-27",
+   "url": "data/bihar/layers/uncertainty_2024-09-27.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Model uncertainty (predictive entropy)",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#3B0F70",
+     "#8C2981",
+     "#DE4968",
+     "#FE9F6D",
+     "#FCFDBF"
+    ],
+    "min": "0 bits (certain)",
+    "max": "1 bit (p = 0.5)"
+   }
+  },
+  {
+   "id": "sar_2024-10-09",
+   "kind": "sar",
+   "date": "2024-10-09",
+   "url": "data/bihar/layers/sar_2024-10-09.jpg",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Sentinel-1 VV backscatter",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "min": "-25 dB",
+    "max": "0 dB"
+   },
+   "attribution": "Contains modified Copernicus Sentinel data 2024"
+  },
+  {
+   "id": "water_2024-10-09",
+   "kind": "water",
+   "date": "2024-10-09",
+   "url": "data/bihar/layers/water_2024-10-09.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Water extent (SARITA model)",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Water"
+    }
+   ]
+  },
+  {
+   "id": "flood_2024-10-09",
+   "kind": "flood",
+   "date": "2024-10-09",
+   "url": "data/bihar/layers/flood_2024-10-09.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Flood: new water vs. 27 Sep reference",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Reference / permanent water"
+    },
+    {
+     "color": "#E4572E",
+     "label": "Flood (new water)"
+    }
+   ]
+  },
+  {
+   "id": "uncertainty_2024-10-09",
+   "kind": "uncertainty",
+   "date": "2024-10-09",
+   "url": "data/bihar/layers/uncertainty_2024-10-09.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Model uncertainty (predictive entropy)",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#3B0F70",
+     "#8C2981",
+     "#DE4968",
+     "#FE9F6D",
+     "#FCFDBF"
+    ],
+    "min": "0 bits (certain)",
+    "max": "1 bit (p = 0.5)"
+   }
+  },
+  {
+   "id": "sar_2024-10-21",
+   "kind": "sar",
+   "date": "2024-10-21",
+   "url": "data/bihar/layers/sar_2024-10-21.jpg",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Sentinel-1 VV backscatter",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "min": "-25 dB",
+    "max": "0 dB"
+   },
+   "attribution": "Contains modified Copernicus Sentinel data 2024"
+  },
+  {
+   "id": "water_2024-10-21",
+   "kind": "water",
+   "date": "2024-10-21",
+   "url": "data/bihar/layers/water_2024-10-21.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Water extent (SARITA model)",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Water"
+    }
+   ]
+  },
+  {
+   "id": "flood_2024-10-21",
+   "kind": "flood",
+   "date": "2024-10-21",
+   "url": "data/bihar/layers/flood_2024-10-21.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Flood: new water vs. 27 Sep reference",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Reference / permanent water"
+    },
+    {
+     "color": "#E4572E",
+     "label": "Flood (new water)"
+    }
+   ]
+  },
+  {
+   "id": "uncertainty_2024-10-21",
+   "kind": "uncertainty",
+   "date": "2024-10-21",
+   "url": "data/bihar/layers/uncertainty_2024-10-21.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Model uncertainty (predictive entropy)",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#3B0F70",
+     "#8C2981",
+     "#DE4968",
+     "#FE9F6D",
+     "#FCFDBF"
+    ],
+    "min": "0 bits (certain)",
+    "max": "1 bit (p = 0.5)"
+   }
+  },
+  {
+   "id": "sar_2024-11-02",
+   "kind": "sar",
+   "date": "2024-11-02",
+   "url": "data/bihar/layers/sar_2024-11-02.jpg",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Sentinel-1 VV backscatter",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "min": "-25 dB",
+    "max": "0 dB"
+   },
+   "attribution": "Contains modified Copernicus Sentinel data 2024"
+  },
+  {
+   "id": "water_2024-11-02",
+   "kind": "water",
+   "date": "2024-11-02",
+   "url": "data/bihar/layers/water_2024-11-02.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Water extent (SARITA model)",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Water"
+    }
+   ]
+  },
+  {
+   "id": "flood_2024-11-02",
+   "kind": "flood",
+   "date": "2024-11-02",
+   "url": "data/bihar/layers/flood_2024-11-02.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Flood: new water vs. 27 Sep reference",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#2B6CB0",
+     "label": "Reference / permanent water"
+    },
+    {
+     "color": "#E4572E",
+     "label": "Flood (new water)"
+    }
+   ]
+  },
+  {
+   "id": "uncertainty_2024-11-02",
+   "kind": "uncertainty",
+   "date": "2024-11-02",
+   "url": "data/bihar/layers/uncertainty_2024-11-02.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Model uncertainty (predictive entropy)",
+   "width": 4031,
+   "height": 3372,
+   "legend": {
+    "type": "gradient",
+    "stops": [
+     "#3B0F70",
+     "#8C2981",
+     "#DE4968",
+     "#FE9F6D",
+     "#FCFDBF"
+    ],
+    "min": "0 bits (certain)",
+    "max": "1 bit (p = 0.5)"
+   }
+  },
+  {
+   "id": "duration",
+   "kind": "duration",
+   "date": null,
+   "url": "data/bihar/layers/duration.png",
+   "bounds": [
+    [
+     25.5430631,
+     85.5855758
+    ],
+    [
+     26.7569887,
+     87.2022616
+    ]
+   ],
+   "label": "Flood duration (post-event dates flooded)",
+   "width": 4031,
+   "height": 3372,
+   "legend": [
+    {
+     "color": "#F8C49F",
+     "label": "1 of 3 dates"
+    },
+    {
+     "color": "#E4572E",
+     "label": "2 of 3 dates"
+    },
+    {
+     "color": "#8C1C13",
+     "label": "3 of 3 dates"
+    }
+   ]
+  }
+ ],
+ "crs": "EPSG:3857",
+ "ground_resolution_m": 40.0,
+ "source": "sarita.export_web",
+ "generated": "2026-10-24T08:26:37+05:30"
+}

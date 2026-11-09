@@ -1,0 +1,1355 @@
+{
+  "type": "FeatureCollection",
+  "schema": "bandh.detections.v1",
+  "mock": false,
+  "crs": "EPSG:4326",
+  "orbit": 85,
+  "series": "o85_2024",
+  "method": "sarita.bandh.detect_corridor: sarita.bandh.detect v1 rule set on 12-day orbit-85 corridor water-probability pairs, Jun-Oct 2024",
+  "validation_status": "unvalidated",
+  "note": "Rule-based breach candidates from orbit-85 SAR water probability. Thresholds were set on the orbit-121 event pair; the 2024-09-24 to 2024-10-06 pair is the first post-breach orbit-85 pass. n = 1 event; no accuracy, precision or recall is claimed. Do not read this file as a validation of the detector.",
+  "km_embankment_total": 289.44,
+  "per_pair": [
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-06-08",
+        "2024-06-20"
+      ],
+      "dt_days": 12,
+      "period": "pre_breach",
+      "components_ge_min_area": 3,
+      "no_contact": 3,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 0,
+      "nonevent_candidates_per_100km": 0.0,
+      "candidates_per_100km": 0.0,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-06-20",
+        "2024-07-02"
+      ],
+      "dt_days": 12,
+      "period": "pre_breach",
+      "components_ge_min_area": 16,
+      "no_contact": 11,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 5,
+      "detections": 5,
+      "candidates": 3,
+      "likely_false_alarm": 2,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 3,
+      "nonevent_candidates_per_100km": 1.036,
+      "candidates_per_100km": 1.036,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-07-02",
+        "2024-07-14"
+      ],
+      "dt_days": 12,
+      "period": "pre_breach",
+      "components_ge_min_area": 28,
+      "no_contact": 19,
+      "near_miss_150_300m": 2,
+      "raw_before_dedupe": 9,
+      "detections": 9,
+      "candidates": 3,
+      "likely_false_alarm": 6,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 3,
+      "nonevent_candidates_per_100km": 1.036,
+      "candidates_per_100km": 1.036,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-07-14",
+        "2024-07-26"
+      ],
+      "dt_days": 12,
+      "period": "pre_breach",
+      "components_ge_min_area": 0,
+      "no_contact": 0,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 0,
+      "nonevent_candidates_per_100km": 0.0,
+      "candidates_per_100km": 0.0,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-07-26",
+        "2024-08-07"
+      ],
+      "dt_days": 12,
+      "period": "pre_breach",
+      "components_ge_min_area": 15,
+      "no_contact": 8,
+      "near_miss_150_300m": 2,
+      "raw_before_dedupe": 7,
+      "detections": 6,
+      "candidates": 4,
+      "likely_false_alarm": 2,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 4,
+      "nonevent_candidates_per_100km": 1.382,
+      "candidates_per_100km": 1.382,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-08-07",
+        "2024-08-19"
+      ],
+      "dt_days": 12,
+      "period": "pre_breach",
+      "components_ge_min_area": 0,
+      "no_contact": 0,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 0,
+      "nonevent_candidates_per_100km": 0.0,
+      "candidates_per_100km": 0.0,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-08-19",
+        "2024-08-31"
+      ],
+      "dt_days": 12,
+      "period": "pre_breach",
+      "components_ge_min_area": 0,
+      "no_contact": 0,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 0,
+      "nonevent_candidates_per_100km": 0.0,
+      "candidates_per_100km": 0.0,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-08-31",
+        "2024-09-24"
+      ],
+      "dt_days": 24,
+      "period": "pre_breach",
+      "components_ge_min_area": 2,
+      "no_contact": 2,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 0,
+      "nonevent_candidates_per_100km": 0.0,
+      "candidates_per_100km": 0.0,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-09-24",
+        "2024-10-06"
+      ],
+      "dt_days": 12,
+      "period": "post_breach",
+      "components_ge_min_area": 11,
+      "no_contact": 7,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 4,
+      "detections": 4,
+      "candidates": 4,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 1,
+      "nonevent_candidates": 3,
+      "nonevent_candidates_per_100km": 1.036,
+      "candidates_per_100km": 1.382,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-10-06",
+        "2024-10-18"
+      ],
+      "dt_days": 12,
+      "period": "post_breach",
+      "components_ge_min_area": 0,
+      "no_contact": 0,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 0,
+      "nonevent_candidates_per_100km": 0.0,
+      "candidates_per_100km": 0.0,
+      "shared_water_merged_detail": []
+    },
+    {
+      "series": "o85_2024",
+      "orbit": 85,
+      "year": 2024,
+      "pair": [
+        "2024-10-18",
+        "2024-10-30"
+      ],
+      "dt_days": 12,
+      "period": "post_breach",
+      "components_ge_min_area": 0,
+      "no_contact": 0,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "candidates_on_event_line": 0,
+      "nonevent_candidates": 0,
+      "nonevent_candidates_per_100km": 0.0,
+      "candidates_per_100km": 0.0,
+      "shared_water_merged_detail": []
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.510196,
+          26.514796
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-06-20_2024-07-02_001",
+        "pair": [
+          "2024-06-20",
+          "2024-07-02"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KOSHIP-W-02",
+        "stretch_id": "KOSHIP-W-02-001150",
+        "stretch_ids_in_contact": [
+          "KOSHIP-W-02-001150"
+        ],
+        "river": "KOSHIP",
+        "side_protected": "right",
+        "stretch_chainage_m": 2300.0,
+        "chainage_m": 2300.0,
+        "radius_m": 588.2,
+        "area_km2": 1.0507,
+        "contact_px": 1022,
+        "contact_span_m": 1076.4,
+        "connect_px": 653,
+        "prob_after_mean": 0.756,
+        "riverside_wet_frac": 0.408,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 64416.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.191251,
+          26.652193
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-06-20_2024-07-02_002",
+        "pair": [
+          "2024-06-20",
+          "2024-07-02"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KAMALA-E-01",
+        "stretch_id": "KAMALA-E-01-005045",
+        "stretch_ids_in_contact": [
+          "KAMALA-E-01-005045"
+        ],
+        "river": "KAMALA",
+        "side_protected": "left",
+        "stretch_chainage_m": 5966.1,
+        "chainage_m": 5966.6,
+        "radius_m": 150.0,
+        "area_km2": 0.8699,
+        "contact_px": 56,
+        "contact_span_m": 130.7,
+        "connect_px": 136,
+        "prob_after_mean": 0.796,
+        "riverside_wet_frac": 0.448,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 80036.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.337961,
+          25.877138
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-06-20_2024-07-02_003",
+        "pair": [
+          "2024-06-20",
+          "2024-07-02"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-005012",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-005012",
+          "KAMALA-W-03-006015"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 5975.5,
+        "chainage_m": 5975.6,
+        "radius_m": 283.6,
+        "area_km2": 0.8181,
+        "contact_px": 413,
+        "contact_span_m": 467.2,
+        "connect_px": 389,
+        "prob_after_mean": 0.764,
+        "riverside_wet_frac": 0.344,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 8356.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.200986,
+          26.691359
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-06-20_2024-07-02_004",
+        "pair": [
+          "2024-06-20",
+          "2024-07-02"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KAMALA-E-01",
+        "stretch_id": "KAMALA-E-01-001009",
+        "stretch_ids_in_contact": [
+          "KAMALA-E-01-000000",
+          "KAMALA-E-01-001009"
+        ],
+        "river": "KAMALA",
+        "side_protected": "left",
+        "stretch_chainage_m": 1337.2,
+        "chainage_m": 1337.3,
+        "radius_m": 909.4,
+        "area_km2": 2.6841,
+        "contact_px": 1431,
+        "contact_span_m": 1718.8,
+        "connect_px": 307,
+        "prob_after_mean": 0.769,
+        "riverside_wet_frac": 0.226,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 84073.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.34222,
+          25.908579
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-06-20_2024-07-02_005",
+        "pair": [
+          "2024-06-20",
+          "2024-07-02"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-001002",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-000000",
+          "KAMALA-W-03-001002"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 1678.2,
+        "chainage_m": 1678.6,
+        "radius_m": 596.1,
+        "area_km2": 0.7006,
+        "contact_px": 406,
+        "contact_span_m": 1092.1,
+        "connect_px": 219,
+        "prob_after_mean": 0.777,
+        "riverside_wet_frac": 0.0,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 5034.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.347476,
+          25.834922
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_001",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [
+          "area_lower_bound_band_edge"
+        ],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-012029",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-011027",
+          "KAMALA-W-03-012029",
+          "KAMALA-W-03-013032",
+          "KAMALA-W-03-014034"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 12250.7,
+        "chainage_m": 12251.0,
+        "radius_m": 1576.8,
+        "area_km2": 9.9562,
+        "contact_px": 2104,
+        "contact_span_m": 3053.6,
+        "connect_px": 461,
+        "prob_after_mean": 0.831,
+        "riverside_wet_frac": 0.71,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 12631.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.47021,
+          25.570991
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_002",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "BURHIG-E-01",
+        "stretch_id": "BURHIG-E-01-001971",
+        "stretch_ids_in_contact": [
+          "BURHIG-E-01-000000",
+          "BURHIG-E-01-000986",
+          "BURHIG-E-01-001971",
+          "BURHIG-E-01-002957",
+          "BURHIG-E-01-003943"
+        ],
+        "river": "BURHIG",
+        "side_protected": "right",
+        "stretch_chainage_m": 2452.4,
+        "chainage_m": 2452.7,
+        "radius_m": 1716.2,
+        "area_km2": 0.9421,
+        "contact_px": 1156,
+        "contact_span_m": 3332.3,
+        "connect_px": 287,
+        "prob_after_mean": 0.817,
+        "riverside_wet_frac": 0.355,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 42918.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.536298,
+          26.106467
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_003",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-029758",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-028766",
+          "KOSHI-E-04-029758",
+          "KOSHI-E-04-030750"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 29850.6,
+        "chainage_m": 29850.5,
+        "radius_m": 817.5,
+        "area_km2": 0.7846,
+        "contact_px": 342,
+        "contact_span_m": 1534.9,
+        "connect_px": 192,
+        "prob_after_mean": 0.821,
+        "riverside_wet_frac": 0.715,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 24344.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.336611,
+          25.891529
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_004",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-003007",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-002005",
+          "KAMALA-W-03-003007",
+          "KAMALA-W-03-004010",
+          "KAMALA-W-03-005012"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 3683.3,
+        "chainage_m": 3683.6,
+        "radius_m": 1528.6,
+        "area_km2": 1.391,
+        "contact_px": 830,
+        "contact_span_m": 2957.3,
+        "connect_px": 255,
+        "prob_after_mean": 0.822,
+        "riverside_wet_frac": 0.003,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 6957.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.690148,
+          26.252576
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_005",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-006944",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-005952",
+          "KOSHI-E-04-006944"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 7162.3,
+        "chainage_m": 7161.7,
+        "radius_m": 485.5,
+        "area_km2": 1.0779,
+        "contact_px": 206,
+        "contact_span_m": 871.1,
+        "connect_px": 187,
+        "prob_after_mean": 0.839,
+        "riverside_wet_frac": 0.0,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 46664.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.680901,
+          26.239173
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_006",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-007935",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-007935",
+          "KOSHI-E-04-008927"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 8910.5,
+        "chainage_m": 8910.9,
+        "radius_m": 567.6,
+        "area_km2": 0.9121,
+        "contact_px": 436,
+        "contact_span_m": 1035.2,
+        "connect_px": 240,
+        "prob_after_mean": 0.799,
+        "riverside_wet_frac": 0.021,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 44954.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.487913,
+          26.504985
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_007",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "BALAN-E-01",
+        "stretch_id": "BALAN-E-01-004833",
+        "stretch_ids_in_contact": [
+          "BALAN-E-01-003867",
+          "BALAN-E-01-004833"
+        ],
+        "river": "BALAN",
+        "side_protected": "left",
+        "stretch_chainage_m": 5250.8,
+        "chainage_m": 5251.1,
+        "radius_m": 630.9,
+        "area_km2": 0.6239,
+        "contact_px": 925,
+        "contact_span_m": 1161.8,
+        "connect_px": 281,
+        "prob_after_mean": 0.823,
+        "riverside_wet_frac": 0.118,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 62897.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.664588,
+          26.228029
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_008",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-010911",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-009919",
+          "KOSHI-E-04-010911"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 10954.9,
+        "chainage_m": 10955.1,
+        "radius_m": 730.9,
+        "area_km2": 0.6207,
+        "contact_px": 408,
+        "contact_span_m": 1361.8,
+        "connect_px": 224,
+        "prob_after_mean": 0.82,
+        "riverside_wet_frac": 0.0,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 42935.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.648365,
+          26.212355
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-02_2024-07-14_009",
+        "pair": [
+          "2024-07-02",
+          "2024-07-14"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-012895",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-012895"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 13352.2,
+        "chainage_m": 13352.3,
+        "radius_m": 309.0,
+        "area_km2": 0.6188,
+        "contact_px": 103,
+        "contact_span_m": 518.1,
+        "connect_px": 171,
+        "prob_after_mean": 0.818,
+        "riverside_wet_frac": 0.018,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 40560.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.680754,
+          26.239067
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-26_2024-08-07_001",
+        "pair": [
+          "2024-07-26",
+          "2024-08-07"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-008927",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-007935",
+          "KOSHI-E-04-008927",
+          "KOSHI-E-04-009919",
+          "KOSHI-E-04-010911"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 8929.2,
+        "chainage_m": 8929.6,
+        "radius_m": 1310.9,
+        "area_km2": 2.5238,
+        "contact_px": 1255,
+        "contact_span_m": 2521.8,
+        "connect_px": 287,
+        "prob_after_mean": 0.844,
+        "riverside_wet_frac": 0.405,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 44935.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.6484,
+          26.212398
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-26_2024-08-07_002",
+        "pair": [
+          "2024-07-26",
+          "2024-08-07"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-012895",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-011903",
+          "KOSHI-E-04-012895"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 13346.4,
+        "chainage_m": 13346.5,
+        "radius_m": 344.3,
+        "area_km2": 1.3425,
+        "contact_px": 132,
+        "contact_span_m": 588.6,
+        "connect_px": 162,
+        "prob_after_mean": 0.827,
+        "riverside_wet_frac": 0.545,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 40566.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.353638,
+          25.84758
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-26_2024-08-07_003",
+        "pair": [
+          "2024-07-26",
+          "2024-08-07"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-014034",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-013032",
+          "KAMALA-W-03-014034"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 14051.6,
+        "chainage_m": 14051.7,
+        "radius_m": 571.3,
+        "area_km2": 1.247,
+        "contact_px": 907,
+        "contact_span_m": 1042.5,
+        "connect_px": 260,
+        "prob_after_mean": 0.766,
+        "riverside_wet_frac": 0.923,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 11153.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.625038,
+          26.179987
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-26_2024-08-07_004",
+        "pair": [
+          "2024-07-26",
+          "2024-08-07"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-016863",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-015871",
+          "KOSHI-E-04-016863",
+          "KOSHI-E-04-017855"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 17650.9,
+        "chainage_m": 17650.7,
+        "radius_m": 763.0,
+        "area_km2": 0.7193,
+        "contact_px": 765,
+        "contact_span_m": 1426.1,
+        "connect_px": 250,
+        "prob_after_mean": 0.826,
+        "riverside_wet_frac": 0.403,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 36367.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.44295,
+          25.570297
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-26_2024-08-07_005",
+        "pair": [
+          "2024-07-26",
+          "2024-08-07"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "BURHIG-E-01",
+        "stretch_id": "BURHIG-E-01-004928",
+        "stretch_ids_in_contact": [
+          "BURHIG-E-01-004928",
+          "BURHIG-E-01-005914"
+        ],
+        "river": "BURHIG",
+        "side_protected": "right",
+        "stretch_chainage_m": 5664.0,
+        "chainage_m": 5664.3,
+        "radius_m": 369.0,
+        "area_km2": 0.9895,
+        "contact_px": 510,
+        "contact_span_m": 638.0,
+        "connect_px": 235,
+        "prob_after_mean": 0.835,
+        "riverside_wet_frac": 0.109,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 42426.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.636351,
+          26.19279
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-07-26_2024-08-07_006",
+        "pair": [
+          "2024-07-26",
+          "2024-08-07"
+        ],
+        "dt_days": 12,
+        "period": "pre_breach",
+        "orbit": 85,
+        "status": "likely_false_alarm",
+        "reasons": [
+          "riverside_dry"
+        ],
+        "notes": [],
+        "embankment_id": "KOSHI-E-04",
+        "stretch_id": "KOSHI-E-04-014879",
+        "stretch_ids_in_contact": [
+          "KOSHI-E-04-014879",
+          "KOSHI-E-04-015871"
+        ],
+        "river": "KOSHI",
+        "side_protected": "left",
+        "stretch_chainage_m": 15837.3,
+        "chainage_m": 15837.2,
+        "radius_m": 504.1,
+        "area_km2": 0.6093,
+        "contact_px": 830,
+        "contact_span_m": 908.2,
+        "connect_px": 333,
+        "prob_after_mean": 0.804,
+        "riverside_wet_frac": 0.202,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 38170.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.344591,
+          25.872947
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-09-24_2024-10-06_001",
+        "pair": [
+          "2024-09-24",
+          "2024-10-06"
+        ],
+        "dt_days": 12,
+        "period": "post_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [
+          "area_lower_bound_band_edge"
+        ],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-016039",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-011027",
+          "KAMALA-W-03-012029",
+          "KAMALA-W-03-013032",
+          "KAMALA-W-03-014034",
+          "KAMALA-W-03-015036",
+          "KAMALA-W-03-016039"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 17041.4,
+        "chainage_m": 17041.3,
+        "radius_m": 2934.3,
+        "area_km2": 9.7422,
+        "contact_px": 4609,
+        "contact_span_m": 5768.5,
+        "connect_px": 750,
+        "prob_after_mean": 0.822,
+        "riverside_wet_frac": 0.53,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 8583.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.369829,
+          25.968609
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-09-24_2024-10-06_002",
+        "pair": [
+          "2024-09-24",
+          "2024-10-06"
+        ],
+        "dt_days": 12,
+        "period": "post_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [
+          "area_lower_bound_band_edge"
+        ],
+        "embankment_id": "KOSHI-W-03",
+        "stretch_id": "KOSHI-W-03-015167",
+        "stretch_ids_in_contact": [
+          "KOSHI-W-03-013144",
+          "KOSHI-W-03-014156",
+          "KOSHI-W-03-015167",
+          "KOSHI-W-03-016178",
+          "KOSHI-W-03-017189"
+        ],
+        "river": "KOSHI",
+        "side_protected": "right",
+        "stretch_chainage_m": 15846.7,
+        "chainage_m": 15846.4,
+        "radius_m": 2080.3,
+        "area_km2": 8.2637,
+        "contact_px": 3772,
+        "contact_span_m": 4060.6,
+        "connect_px": 276,
+        "prob_after_mean": 0.862,
+        "riverside_wet_frac": 0.498,
+        "on_event_line": true,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 2353.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.369234,
+          25.906824
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-09-24_2024-10-06_003",
+        "pair": [
+          "2024-09-24",
+          "2024-10-06"
+        ],
+        "dt_days": 12,
+        "period": "post_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [
+          "area_lower_bound_band_edge"
+        ],
+        "embankment_id": "SUNKOS-W-01",
+        "stretch_id": "SUNKOS-W-01-002000",
+        "stretch_ids_in_contact": [
+          "SUNKOS-W-01-002000"
+        ],
+        "river": "SUNKOS",
+        "side_protected": "right",
+        "stretch_chainage_m": 3000.0,
+        "chainage_m": 3000.0,
+        "radius_m": 184.5,
+        "area_km2": 5.3336,
+        "contact_px": 154,
+        "contact_span_m": 269.0,
+        "connect_px": 340,
+        "prob_after_mean": 0.876,
+        "riverside_wet_frac": 0.536,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 4494.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.367994,
+          25.932537
+        ]
+      },
+      "properties": {
+        "detection_id": "o85_2024_2024-09-24_2024-10-06_004",
+        "pair": [
+          "2024-09-24",
+          "2024-10-06"
+        ],
+        "dt_days": 12,
+        "period": "post_breach",
+        "orbit": 85,
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "SUNKOS-W-01",
+        "stretch_id": "SUNKOS-W-01-000000",
+        "stretch_ids_in_contact": [
+          "SUNKOS-W-01-000000",
+          "SUNKOS-W-01-001000",
+          "SUNKOS-W-01-002000"
+        ],
+        "river": "SUNKOS",
+        "side_protected": "right",
+        "stretch_chainage_m": 148.0,
+        "chainage_m": 148.0,
+        "radius_m": 1364.9,
+        "area_km2": 1.1075,
+        "contact_px": 1636,
+        "contact_span_m": 2629.8,
+        "connect_px": 361,
+        "prob_after_mean": 0.843,
+        "riverside_wet_frac": 0.374,
+        "on_event_line": false,
+        "event_zone_hit": false,
+        "dist_to_orbit121_point_m": 1646.8
+      }
+    }
+  ]
+}

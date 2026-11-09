@@ -1,0 +1,137 @@
+/* SARITA dashboard - Embankment Watch (#bandh). Uses the tokens and card system of app.css. */
+
+/* ------------------------------------------------------------------ header and honesty line */
+.bandh-head { align-items: flex-end; }
+.bandh-date { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.bandh-date label { margin: 0; }
+.bandh-date select { min-width: 170px; }
+.bandh-honest {
+  background: #F1EEF9; border: 1px solid #D3CBEA; color: #2A1B5E; border-radius: 9px;
+  padding: 9px 14px; font-size: 13.5px; line-height: 1.5; margin-bottom: 12px;
+}
+.bandh-honest strong { font-weight: 750; }
+.bandh-notice:empty { display: none; }
+.bandh-notice .notice { margin-top: 0; margin-bottom: 12px; }
+
+/* ------------------------------------------------------------------ layout */
+.bandh-main { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 14px; align-items: start; }
+.bandh-mapcard .bandh-body { display: flex; flex-direction: column; gap: 10px; }
+.bandh-mapcard > .fine { margin-top: 2px; }
+.bandh-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px 16px; flex-wrap: wrap; }
+.bandh-toolbar .layer-toggles { gap: 6px 14px; }
+.bandh-toolbar .select-inline select { padding: 4px 8px; font-size: 12.5px; }
+.bandh-map {
+  height: calc(100vh - 360px); min-height: 460px; max-height: 820px; width: 100%;
+  border: 1px solid var(--line); border-radius: 8px; background: #E9ECE7 url("../img/plain-grid.svg");
+}
+.bandh-table { max-height: calc(100vh - 360px); min-height: 200px; overflow: auto; }
+.bandh-table table.data thead th { top: 0; }
+.bandh-table table.data td.left, .bandh-table table.data th.left { white-space: normal; }
+.bandh-table table.data td:nth-child(2) { font-size: 12px; white-space: nowrap; }
+.bandh-form select { text-overflow: ellipsis; }
+.bandh-table table.data tr.sel td { background: var(--teal-soft); }
+.bandh-table table.data tr.clickable:focus-visible { outline: 2px solid var(--teal); outline-offset: -2px; }
+.bandh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 14px; margin-top: 14px; align-items: start; }
+.bandh-card { min-width: 0; }
+.bandh-card .card-head h2 { font-size: 15px; }
+.bandh-body > .fine:first-child { margin-top: 0; }
+
+/* ------------------------------------------------------------------ forms and buttons */
+.bandh-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 10px; margin: 8px 0 0; }
+.bandh-form label { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.bandh-form input, .bandh-form select { width: 100%; }
+.bandh-form .bandh-wide { grid-column: 1 / -1; }
+.bandh-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0 2px; }
+.bandh-actions .seg { margin-right: 4px; }
+.bandh-actions .btn:disabled { cursor: not-allowed; }
+.bandh-card .btn[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* ------------------------------------------------------------------ drill-down */
+.drill-name { font-size: 17px; font-weight: 750; letter-spacing: -.01em; word-break: break-all; margin: 0; }
+.drill-sec { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line-2); }
+.drill-sec > h3 { font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 6px; }
+.bandh-card .kv { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+.bandh-card .kv .v { text-align: right; overflow-wrap: anywhere; }
+.bandh-reasons { padding-left: 18px; margin: 6px 0 4px; font-size: 12.5px; color: var(--ink); }
+.bandh-reasons li { margin: 2px 0; }
+.bandh-card table.compact td { white-space: normal; }
+.patrol-item { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; background: #FCFCFA; }
+.patrol-head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; }
+.patrol-head strong { text-transform: capitalize; }
+.patrol-note { font-size: 13px; margin-top: 4px; }
+.patrol-photo { display: block; max-width: 100%; max-height: 170px; border-radius: 6px; margin-top: 6px; border: 1px solid var(--line); }
+
+/* ------------------------------------------------------------------ simulator */
+.bandh-sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px; border: 1px solid rgba(0, 0, 0, .12); vertical-align: -1px; margin-right: 4px; }
+#bandhSim .kpis { margin: 10px 0 4px; }
+#bandhSim .kpi .k-value { font-size: 20px; }
+#simOut > .fine, #simOut > .table-scroll { margin-top: 10px; }
+#simOut .table-scroll { max-height: 220px; }
+
+/* ------------------------------------------------------------------ alerts */
+.alert-meta { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0 8px; }
+.alert-text {
+  white-space: pre-wrap; word-break: break-word; font: 14px/1.6 var(--font); margin: 0; padding: 10px 12px;
+  background: #FCFCFA; border: 1px solid var(--line); border-radius: 8px; max-height: 280px; overflow: auto;
+}
+.alert-text[lang="hi"] { font-size: 15px; line-height: 1.75; }
+#alOut > .fine { margin-top: 6px; }
+#alStretch { margin-top: 8px; }
+#alAudioNote { margin-top: 6px; }
+
+/* ------------------------------------------------------------------ backtest */
+.bt-label {
+  display: inline-block; padding: 6px 12px; border: 2px solid #2A1B5E; border-radius: 8px; color: #2A1B5E;
+  background: #F1EEF9; font-size: 15px; margin-bottom: 8px;
+}
+#btBody .kv { margin-top: 10px; }
+
+/* ------------------------------------------------------------------ breach detections (two orbits) */
+.det-sub { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+#detTableBox table.data td, #detTableBox table.data th { white-space: normal; vertical-align: top; }
+.bandh-card table.data tr.det-event td { background: #FBF4DF; }
+.bandh-card table.data tr.det-event td.left:last-child { font-weight: 650; }
+
+/* ------------------------------------------------------------------ responsive */
+@media (max-width: 1180px) {
+  .bandh-main { grid-template-columns: minmax(0, 1fr); }
+  .bandh-map { height: 62vh; max-height: none; }
+  .bandh-table { max-height: 360px; }
+}
+@media (max-width: 860px) {
+  .bandh-head { align-items: flex-start; }
+  .bandh-date { width: 100%; }
+  .bandh-date select { flex: 1 1 auto; min-width: 0; }
+  .bandh-map { min-height: 380px; }
+  .bandh-grid { grid-template-columns: minmax(0, 1fr); }
+  .bandh-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bandh-toolbar { align-items: flex-start; }
+}
+@media (max-width: 520px) {
+  .bandh-form { grid-template-columns: minmax(0, 1fr); }
+  .bandh-actions .btn { flex: 1 1 auto; }
+  .bandh-honest { font-size: 13px; }
+  .bandh-map { min-height: 340px; }
+}
+
+/* ------------------------------------------------------------------ as-of line and patrol link */
+.bandh-patrol-link { text-decoration: none; white-space: nowrap; }
+.bandh-asof {
+  font-size: 15px; line-height: 1.45; color: var(--ink); border-left: 4px solid #2A1B5E;
+  padding: 6px 12px; margin: 0 0 12px; background: #FCFCFA; border-radius: 0 8px 8px 0;
+}
+.bandh-asof:empty { display: none; }
+.bandh-asof strong { font-weight: 750; }
+.bandh-asof .fine { display: inline; margin: 0; }
+
+/* ------------------------------------------------------------------ backtest card */
+.bt-block { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line-2); }
+.bt-block:first-child { margin-top: 10px; border-top: 0; padding-top: 0; }
+.bt-head { font-size: 13.5px; font-weight: 700; margin: 0 0 6px; color: var(--ink); }
+.bt-verdict { font-size: 14px; line-height: 1.5; margin: 0 0 8px; padding-left: 10px; border-left: 3px solid var(--ink); }
+.bt-block.primary .bt-verdict { font-weight: 650; }
+.bt-more { margin-top: 8px; font-size: 13px; }
+.bt-more > summary { cursor: pointer; color: var(--muted); }
+.bt-more table.data td.left, .bt-more table.data th.left { white-space: normal; }
+.bt-foot { margin-top: 12px; }
+.bt-block .notice, #btBody > .notice { margin: 0 0 10px; }

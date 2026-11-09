@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Bandh-Mitra">
+  <rect width="512" height="512" rx="96" fill="#0b5d3b"/>
+  <!-- embankment: a ridge with water on the left and dry land on the right -->
+  <path d="M40 330 Q130 250 256 280 T472 250 L472 470 L40 470 Z" fill="#2f8fbf"/>
+  <path d="M60 300 Q180 170 300 240 T470 200" fill="none" stroke="#f6f7f4" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="256" cy="150" r="34" fill="#f2b84b"/>
+</svg>

@@ -1,0 +1,302 @@
+{
+  "type": "FeatureCollection",
+  "schema": "bandh.detections.v1",
+  "mock": false,
+  "crs": "EPSG:4326",
+  "method": "sarita.bandh.detect v1 rule set on 12-day orbit-121 water-probability pairs",
+  "validation_status": "unvalidated",
+  "note": "Rule-based breach candidates from SAR water probability. One known 2024 event is among the pairs; no accuracy, precision or recall is claimed.",
+  "km_embankment_total": 289.44,
+  "per_pair": [
+    {
+      "pair": [
+        "2024-08-22",
+        "2024-09-03"
+      ],
+      "dt_days": 12,
+      "components_ge_min_area": 2,
+      "no_contact": 2,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "shared_water_merged_detail": [],
+      "event_matches": 0,
+      "non_event_candidates_per_100km": 0.0,
+      "non_event_all_per_100km": 0.0
+    },
+    {
+      "pair": [
+        "2024-09-03",
+        "2024-09-15"
+      ],
+      "dt_days": 12,
+      "components_ge_min_area": 2,
+      "no_contact": 2,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "shared_water_merged_detail": [],
+      "event_matches": 0,
+      "non_event_candidates_per_100km": 0.0,
+      "non_event_all_per_100km": 0.0
+    },
+    {
+      "pair": [
+        "2024-09-15",
+        "2024-09-27"
+      ],
+      "dt_days": 12,
+      "components_ge_min_area": 0,
+      "no_contact": 0,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "shared_water_merged_detail": [],
+      "event_matches": 0,
+      "non_event_candidates_per_100km": 0.0,
+      "non_event_all_per_100km": 0.0
+    },
+    {
+      "pair": [
+        "2024-09-27",
+        "2024-10-09"
+      ],
+      "dt_days": 12,
+      "components_ge_min_area": 10,
+      "no_contact": 5,
+      "near_miss_150_300m": 1,
+      "raw_before_dedupe": 5,
+      "detections": 4,
+      "candidates": 4,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 1,
+      "shared_water_merged_detail": [
+        {
+          "embankment_id": "SUNKOS-W-01",
+          "stretch_id": "SUNKOS-W-01-000000",
+          "status": "candidate",
+          "area_km2": 2.1086,
+          "lon": 86.368011,
+          "lat": 25.933781,
+          "merged_into_embankment_id": "KOSHI-W-03",
+          "merged_into_stretch_id": "KOSHI-W-03-017189",
+          "shared_px": 20178,
+          "shared_frac_of_smaller": 0.957
+        }
+      ],
+      "event_matches": 1,
+      "non_event_candidates_per_100km": 1.036,
+      "non_event_all_per_100km": 1.036
+    },
+    {
+      "pair": [
+        "2024-10-09",
+        "2024-10-21"
+      ],
+      "dt_days": 12,
+      "components_ge_min_area": 2,
+      "no_contact": 2,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "shared_water_merged_detail": [],
+      "event_matches": 0,
+      "non_event_candidates_per_100km": 0.0,
+      "non_event_all_per_100km": 0.0
+    },
+    {
+      "pair": [
+        "2024-10-21",
+        "2024-11-02"
+      ],
+      "dt_days": 12,
+      "components_ge_min_area": 0,
+      "no_contact": 0,
+      "near_miss_150_300m": 0,
+      "raw_before_dedupe": 0,
+      "detections": 0,
+      "candidates": 0,
+      "likely_false_alarm": 0,
+      "shared_water_merged": 0,
+      "shared_water_merged_detail": [],
+      "event_matches": 0,
+      "non_event_candidates_per_100km": 0.0,
+      "non_event_all_per_100km": 0.0
+    }
+  ],
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.368372,
+          25.947403
+        ]
+      },
+      "properties": {
+        "detection_id": "2024-09-27_2024-10-09_001",
+        "pair": [
+          "2024-09-27",
+          "2024-10-09"
+        ],
+        "status": "candidate",
+        "reasons": [],
+        "notes": [
+          "area_lower_bound_band_edge"
+        ],
+        "embankment_id": "KOSHI-W-03",
+        "stretch_id": "KOSHI-W-03-017189",
+        "stretch_ids_in_contact": [
+          "KOSHI-W-03-014156",
+          "KOSHI-W-03-015167",
+          "KOSHI-W-03-016178",
+          "KOSHI-W-03-017189"
+        ],
+        "river": "KOSHI",
+        "side_protected": "right",
+        "stretch_chainage_m": 18200.2,
+        "chainage_m": 18200.1,
+        "radius_m": 1788.5,
+        "area_km2": 6.2911,
+        "contact_px": 3378,
+        "contact_span_m": 3477.0,
+        "connect_px": 363,
+        "prob_after_mean": 0.804,
+        "riverside_wet_frac": 0.525,
+        "event_match": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.353644,
+          25.848323
+        ]
+      },
+      "properties": {
+        "detection_id": "2024-09-27_2024-10-09_002",
+        "pair": [
+          "2024-09-27",
+          "2024-10-09"
+        ],
+        "status": "candidate",
+        "reasons": [],
+        "notes": [
+          "area_lower_bound_band_edge"
+        ],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-014034",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-013032",
+          "KAMALA-W-03-014034"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 14134.0,
+        "chainage_m": 14134.1,
+        "radius_m": 654.8,
+        "area_km2": 3.632,
+        "contact_px": 821,
+        "contact_span_m": 1209.5,
+        "connect_px": 299,
+        "prob_after_mean": 0.775,
+        "riverside_wet_frac": 0.992,
+        "event_match": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.481993,
+          25.566029
+        ]
+      },
+      "properties": {
+        "detection_id": "2024-09-27_2024-10-09_003",
+        "pair": [
+          "2024-09-27",
+          "2024-10-09"
+        ],
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "BURHIG-E-01",
+        "stretch_id": "BURHIG-E-01-000986",
+        "stretch_ids_in_contact": [
+          "BURHIG-E-01-000986",
+          "BURHIG-E-01-001971",
+          "BURHIG-E-01-004928",
+          "BURHIG-E-01-005914"
+        ],
+        "river": "BURHIG",
+        "side_protected": "right",
+        "stretch_chainage_m": 1085.3,
+        "chainage_m": 1085.0,
+        "radius_m": 2518.9,
+        "area_km2": 1.0996,
+        "contact_px": 114,
+        "contact_span_m": 4937.8,
+        "connect_px": 129,
+        "prob_after_mean": 0.813,
+        "riverside_wet_frac": 0.305,
+        "event_match": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.344591,
+          25.872947
+        ]
+      },
+      "properties": {
+        "detection_id": "2024-09-27_2024-10-09_004",
+        "pair": [
+          "2024-09-27",
+          "2024-10-09"
+        ],
+        "status": "candidate",
+        "reasons": [],
+        "notes": [],
+        "embankment_id": "KAMALA-W-03",
+        "stretch_id": "KAMALA-W-03-016039",
+        "stretch_ids_in_contact": [
+          "KAMALA-W-03-014034",
+          "KAMALA-W-03-015036",
+          "KAMALA-W-03-016039"
+        ],
+        "river": "KAMALA",
+        "side_protected": "right",
+        "stretch_chainage_m": 17041.4,
+        "chainage_m": 17041.3,
+        "radius_m": 1166.2,
+        "area_km2": 0.9374,
+        "contact_px": 1149,
+        "contact_span_m": 2232.3,
+        "connect_px": 429,
+        "prob_after_mean": 0.757,
+        "riverside_wet_frac": 0.267,
+        "event_match": false
+      }
+    }
+  ]
+}

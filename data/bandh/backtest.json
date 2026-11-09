@@ -1,0 +1,1882 @@
+{
+  "schema": "bandh.backtest.v1",
+  "protocol": "bandh-bt-protocol-v1",
+  "label": "n = 1, anecdote, not accuracy",
+  "mock": false,
+  "computed_at": "2026-11-03T20:52:10.964710+00:00",
+  "validation_status": "unvalidated",
+  "targets": {
+    "T1": [
+      "KOSHI-W-03-017189"
+    ],
+    "T2": [
+      "KOSHI-W-03-016178",
+      "KOSHI-W-03-017189",
+      "SUNKOS-W-01-000000"
+    ],
+    "T3": [
+      "KOSHI-W-03-012133"
+    ]
+  },
+  "partial": false,
+  "freezes": {
+    "2024-09-27": {
+      "status": "ok",
+      "orbit": 121,
+      "n_ranked": 230,
+      "ranked_length_km": 228.6885,
+      "geometry_ok_length_km": 228.6885,
+      "f1_baseline_rule": "same-year dry season 01-01 to 05-31, orbit-matched (protocol 2)",
+      "feature_status": {
+        "F1": {
+          "ok": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 3,
+          "ok": 227
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 20,
+          "n_ranked": 230,
+          "percentile": 91.73913043478261,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 8.308244620958202,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 20,
+          "n_ranked": 230,
+          "percentile": 91.73913043478261,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 8.308244620958202,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 101,
+          "n_ranked": 230,
+          "percentile": 56.52173913043479,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 43.727603268201065,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      },
+      "koshi_subset": {
+        "n_ranked": 116,
+        "ranked_length_km": 116.2103,
+        "normalised_within": "KOSHI subset",
+        "targets": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 10,
+            "n_ranked": 116,
+            "percentile": 92.24137931034483,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": true,
+            "ranked_length_km": 116.2103,
+            "stretches_above_per_100km": 7.744580299680837,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 10,
+            "n_ranked": 116,
+            "percentile": 92.24137931034483,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": true,
+            "ranked_length_km": 116.2103,
+            "stretches_above_per_100km": 7.744580299680837,
+            "n_targets_ranked": 2,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 43,
+            "n_ranked": 116,
+            "percentile": 63.793103448275865,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 116.2103,
+            "stretches_above_per_100km": 36.141374731843904,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "random_expectation": {
+          "expected_percentile": 50.0,
+          "p_top5pct": 0.05,
+          "expected_stretches_above": 57.5,
+          "expected_stretches_above_per_100km": 49.47926302573868,
+          "ranked_length_km": 116.2103
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": 50.0,
+        "p_top5pct": 0.05,
+        "expected_stretches_above": 114.5,
+        "expected_stretches_above_per_100km": 50.06810574209022,
+        "ranked_length_km": 228.6885
+      },
+      "ablations": {
+        "only_F1": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 15,
+            "n_ranked": 230,
+            "percentile": 93.91304347826087,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 6.121864457548149,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 15,
+            "n_ranked": 230,
+            "percentile": 93.91304347826087,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 6.121864457548149,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 142,
+            "n_ranked": 230,
+            "percentile": 38.69565217391304,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 61.655920608163505,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "only_F2": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 159,
+            "n_ranked": 227,
+            "percentile": 30.396475770925115,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 225.8884,
+            "stretches_above_per_100km": 69.94604415277634,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-016178",
+            "rank": 150,
+            "n_ranked": 227,
+            "percentile": 34.36123348017621,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 225.8884,
+            "stretches_above_per_100km": 65.96177581495995,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 173,
+            "n_ranked": 227,
+            "percentile": 24.229074889867842,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 225.8884,
+            "stretches_above_per_100km": 76.14379490049069,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "only_F7": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 10,
+            "n_ranked": 230,
+            "percentile": 96.08695652173913,
+            "top1pct": false,
+            "top5pct": true,
+            "top10": true,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 3.935484294138096,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-016178",
+            "rank": 5,
+            "n_ranked": 230,
+            "percentile": 98.26086956521739,
+            "top1pct": false,
+            "top5pct": true,
+            "top10": true,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 1.7491041307280426,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 15,
+            "n_ranked": 230,
+            "percentile": 93.91304347826087,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 6.121864457548149,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "only_F8": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 126,
+            "n_ranked": 230,
+            "percentile": 45.652173913043484,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 54.65950408525133,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "SUNKOS-W-01-000000",
+            "rank": 56,
+            "n_ranked": 230,
+            "percentile": 76.08695652173914,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 24.050181797510586,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 78,
+            "n_ranked": 230,
+            "percentile": 66.52173913043478,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 33.67025451651482,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "only_F4": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 227,
+            "n_ranked": 230,
+            "percentile": 1.7391304347826098,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 98.8243833861344,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-016178",
+            "rank": 226,
+            "n_ranked": 230,
+            "percentile": 2.1739130434782594,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 98.3871073534524,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 222,
+            "n_ranked": 230,
+            "percentile": 3.913043478260869,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 96.63800322272435,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F1": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 69,
+            "n_ranked": 230,
+            "percentile": 70.43478260869564,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 29.734770222376728,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-016178",
+            "rank": 58,
+            "n_ranked": 230,
+            "percentile": 75.21739130434783,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 24.92473386287461,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 74,
+            "n_ranked": 230,
+            "percentile": 68.26086956521739,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 31.921150385786778,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F2": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 2,
+            "n_ranked": 230,
+            "percentile": 99.56521739130434,
+            "top1pct": true,
+            "top5pct": true,
+            "top10": true,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 0.43727603268201065,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 2,
+            "n_ranked": 230,
+            "percentile": 99.56521739130434,
+            "top1pct": true,
+            "top5pct": true,
+            "top10": true,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 0.43727603268201065,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 67,
+            "n_ranked": 230,
+            "percentile": 71.30434782608695,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 28.860218157012707,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F7": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 51,
+            "n_ranked": 230,
+            "percentile": 78.26086956521739,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 21.863801634100533,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 51,
+            "n_ranked": 230,
+            "percentile": 78.26086956521739,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 21.863801634100533,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 163,
+            "n_ranked": 230,
+            "percentile": 29.565217391304344,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 70.83871729448573,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F8": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 16,
+            "n_ranked": 230,
+            "percentile": 93.47826086956522,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 6.55914049023016,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 16,
+            "n_ranked": 230,
+            "percentile": 93.47826086956522,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 6.55914049023016,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 111,
+            "n_ranked": 230,
+            "percentile": 52.17391304347826,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 48.10036359502117,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F4": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 20,
+            "n_ranked": 230,
+            "percentile": 91.73913043478261,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 8.308244620958202,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 20,
+            "n_ranked": 230,
+            "percentile": 91.73913043478261,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 8.308244620958202,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 101,
+            "n_ranked": 230,
+            "percentile": 56.52173913043479,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 43.727603268201065,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        }
+      },
+      "rank_csv": "/Users/rounakchoudhary/Desktop/nitp_6th_sem_project/sarita/results/bandh/backtest_ranks_2024-09-27.csv"
+    },
+    "2024-09-24": {
+      "status": "ok",
+      "orbit": 85,
+      "n_ranked": 211,
+      "ranked_length_km": 209.2717,
+      "geometry_ok_length_km": 228.6885,
+      "f1_baseline_rule": "same-year dry season 01-01 to 05-31, orbit-matched (protocol 2)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 19,
+          "ok": 211
+        },
+        "F7": {
+          "no_data": 17,
+          "ok": 213
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 61,
+          "n_ranked": 211,
+          "percentile": 71.56398104265402,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 209.2717,
+          "stretches_above_per_100km": 28.670861850885714,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 61,
+          "n_ranked": 211,
+          "percentile": 71.56398104265402,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 209.2717,
+          "stretches_above_per_100km": 28.670861850885714,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 62,
+          "n_ranked": 211,
+          "percentile": 71.09004739336493,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 209.2717,
+          "stretches_above_per_100km": 29.148709548400475,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      },
+      "koshi_subset": {
+        "n_ranked": 101,
+        "ranked_length_km": 100.5603,
+        "normalised_within": "KOSHI subset",
+        "targets": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 8,
+            "n_ranked": 101,
+            "percentile": 93.06930693069306,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": true,
+            "ranked_length_km": 100.5603,
+            "stretches_above_per_100km": 6.9609975308347325,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 8,
+            "n_ranked": 101,
+            "percentile": 93.06930693069306,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": true,
+            "ranked_length_km": 100.5603,
+            "stretches_above_per_100km": 6.9609975308347325,
+            "n_targets_ranked": 2,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 9,
+            "n_ranked": 101,
+            "percentile": 92.07920792079209,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": true,
+            "ranked_length_km": 100.5603,
+            "stretches_above_per_100km": 7.955425749525409,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "random_expectation": {
+          "expected_percentile": 50.0,
+          "p_top5pct": 0.05,
+          "expected_stretches_above": 50.0,
+          "expected_stretches_above_per_100km": 49.72141093453381,
+          "ranked_length_km": 100.5603
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": 50.0,
+        "p_top5pct": 0.05,
+        "expected_stretches_above": 105.0,
+        "expected_stretches_above_per_100km": 50.174008239049996,
+        "ranked_length_km": 209.2717
+      },
+      "ablations": {
+        "only_F1": {
+          "T1": {
+            "status": "not_ranked",
+            "targets": [
+              "KOSHI-W-03-017189"
+            ]
+          },
+          "T2": {
+            "status": "not_ranked",
+            "targets": [
+              "KOSHI-W-03-016178",
+              "KOSHI-W-03-017189",
+              "SUNKOS-W-01-000000"
+            ]
+          },
+          "T3": {
+            "status": "not_ranked",
+            "targets": [
+              "KOSHI-W-03-012133"
+            ]
+          }
+        },
+        "only_F2": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 72,
+            "n_ranked": 211,
+            "percentile": 66.35071090047393,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 33.927186523548094,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 72,
+            "n_ranked": 211,
+            "percentile": 66.35071090047393,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 33.927186523548094,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 93,
+            "n_ranked": 211,
+            "percentile": 56.398104265402836,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 43.961988171358094,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "only_F7": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 25,
+            "n_ranked": 213,
+            "percentile": 88.73239436619718,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 210.9885,
+            "stretches_above_per_100km": 11.375027548894847,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-016178",
+            "rank": 15,
+            "n_ranked": 213,
+            "percentile": 93.42723004694835,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 210.9885,
+            "stretches_above_per_100km": 6.635432736855326,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 12,
+            "n_ranked": 213,
+            "percentile": 94.83568075117371,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 210.9885,
+            "stretches_above_per_100km": 5.213554293243471,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "only_F8": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 126,
+            "n_ranked": 230,
+            "percentile": 45.652173913043484,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 54.65950408525133,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "SUNKOS-W-01-000000",
+            "rank": 56,
+            "n_ranked": 230,
+            "percentile": 76.08695652173914,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 24.050181797510586,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 78,
+            "n_ranked": 230,
+            "percentile": 66.52173913043478,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 33.67025451651482,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "only_F4": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 227,
+            "n_ranked": 230,
+            "percentile": 1.7391304347826098,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 98.8243833861344,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-016178",
+            "rank": 226,
+            "n_ranked": 230,
+            "percentile": 2.1739130434782594,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 98.3871073534524,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 222,
+            "n_ranked": 230,
+            "percentile": 3.913043478260869,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 228.6885,
+            "stretches_above_per_100km": 96.63800322272435,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F1": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 61,
+            "n_ranked": 215,
+            "percentile": 72.09302325581395,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 213.0385,
+            "stretches_above_per_100km": 28.163923422292214,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 61,
+            "n_ranked": 215,
+            "percentile": 72.09302325581395,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 213.0385,
+            "stretches_above_per_100km": 28.163923422292214,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 62,
+            "n_ranked": 215,
+            "percentile": 71.6279069767442,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 213.0385,
+            "stretches_above_per_100km": 28.633322145997088,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F2": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 36,
+            "n_ranked": 213,
+            "percentile": 83.56807511737088,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 210.9885,
+            "stretches_above_per_100km": 16.588581842138318,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-016178",
+            "rank": 25,
+            "n_ranked": 213,
+            "percentile": 88.73239436619718,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 210.9885,
+            "stretches_above_per_100km": 11.375027548894847,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 17,
+            "n_ranked": 213,
+            "percentile": 92.48826291079813,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 210.9885,
+            "stretches_above_per_100km": 7.58335169926323,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F7": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 84,
+            "n_ranked": 211,
+            "percentile": 60.66350710900474,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 39.661358893725236,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 84,
+            "n_ranked": 211,
+            "percentile": 60.66350710900474,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 39.661358893725236,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 104,
+            "n_ranked": 211,
+            "percentile": 51.18483412322274,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 49.218312844020474,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F8": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 60,
+            "n_ranked": 211,
+            "percentile": 72.03791469194313,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 28.19301415337095,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 60,
+            "n_ranked": 211,
+            "percentile": 72.03791469194313,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 28.19301415337095,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 68,
+            "n_ranked": 211,
+            "percentile": 68.24644549763033,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 209.2717,
+            "stretches_above_per_100km": 32.01579573348904,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        },
+        "without_F4": {
+          "T1": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 61,
+            "n_ranked": 209,
+            "percentile": 71.29186602870814,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 207.2217,
+            "stretches_above_per_100km": 28.95449656092967,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          },
+          "T2": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-017189",
+            "rank": 61,
+            "n_ranked": 209,
+            "percentile": 71.29186602870814,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 207.2217,
+            "stretches_above_per_100km": 28.95449656092967,
+            "n_targets_ranked": 3,
+            "n_targets": 3
+          },
+          "T3": {
+            "status": "ok",
+            "best_stretch": "KOSHI-W-03-012133",
+            "rank": 62,
+            "n_ranked": 209,
+            "percentile": 70.8133971291866,
+            "top1pct": false,
+            "top5pct": false,
+            "top10": false,
+            "ranked_length_km": 207.2217,
+            "stretches_above_per_100km": 29.437071503611833,
+            "n_targets_ranked": 1,
+            "n_targets": 1
+          }
+        }
+      },
+      "rank_csv": "/Users/rounakchoudhary/Desktop/nitp_6th_sem_project/sarita/results/bandh/backtest_ranks_2024-09-24.csv"
+    }
+  },
+  "negative_controls": {
+    "2023-07-11": {
+      "status": "ok",
+      "n_ranked": 0,
+      "ranked_length_km": 0.0,
+      "targets": {
+        "T1": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-017189"
+          ]
+        },
+        "T2": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-016178",
+            "KOSHI-W-03-017189",
+            "SUNKOS-W-01-000000"
+          ]
+        },
+        "T3": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-012133"
+          ]
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": null,
+        "p_top5pct": null,
+        "expected_stretches_above": null,
+        "expected_stretches_above_per_100km": null,
+        "ranked_length_km": 0.0
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 230
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-07-11: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-07-11: at most 0 valid dates; protocol 7 needs 8."
+    },
+    "2023-08-16": {
+      "status": "ok",
+      "n_ranked": 0,
+      "ranked_length_km": 0.0,
+      "targets": {
+        "T1": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-017189"
+          ]
+        },
+        "T2": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-016178",
+            "KOSHI-W-03-017189",
+            "SUNKOS-W-01-000000"
+          ]
+        },
+        "T3": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-012133"
+          ]
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": null,
+        "p_top5pct": null,
+        "expected_stretches_above": null,
+        "expected_stretches_above_per_100km": null,
+        "ranked_length_km": 0.0
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 230
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-08-16: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-08-16: at most 1 valid dates; protocol 7 needs 8."
+    },
+    "2023-08-28": {
+      "status": "ok",
+      "n_ranked": 0,
+      "ranked_length_km": 0.0,
+      "targets": {
+        "T1": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-017189"
+          ]
+        },
+        "T2": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-016178",
+            "KOSHI-W-03-017189",
+            "SUNKOS-W-01-000000"
+          ]
+        },
+        "T3": {
+          "status": "not_ranked",
+          "targets": [
+            "KOSHI-W-03-012133"
+          ]
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": null,
+        "p_top5pct": null,
+        "expected_stretches_above": null,
+        "expected_stretches_above_per_100km": null,
+        "ranked_length_km": 0.0
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 230
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-08-28: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-08-28: at most 2 valid dates; protocol 7 needs 8."
+    },
+    "2023-09-09": {
+      "status": "ok",
+      "n_ranked": 209,
+      "ranked_length_km": 207.8715,
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 102,
+          "n_ranked": 209,
+          "percentile": 51.674641148325364,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 207.8715,
+          "stretches_above_per_100km": 48.58770923382955,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-016178",
+          "rank": 97,
+          "n_ranked": 209,
+          "percentile": 54.066985645933016,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 207.8715,
+          "stretches_above_per_100km": 46.182377093540964,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 98,
+          "n_ranked": 209,
+          "percentile": 53.588516746411486,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 207.8715,
+          "stretches_above_per_100km": 46.66344352159868,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": 50.0,
+        "p_top5pct": 0.05,
+        "expected_stretches_above": 104.0,
+        "expected_stretches_above_per_100km": 50.030908518002704,
+        "ranked_length_km": 207.8715
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 21,
+          "ok": 209
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-09-09: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-09-09: at most 3 valid dates; protocol 7 needs 8."
+    },
+    "2023-09-21": {
+      "status": "ok",
+      "n_ranked": 217,
+      "ranked_length_km": 215.8023,
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 65,
+          "n_ranked": 217,
+          "percentile": 70.50691244239631,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 215.8023,
+          "stretches_above_per_100km": 29.65677381566369,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "SUNKOS-W-01-000000",
+          "rank": 58,
+          "n_ranked": 217,
+          "percentile": 73.73271889400922,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 215.8023,
+          "stretches_above_per_100km": 26.413064179575475,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 63,
+          "n_ranked": 217,
+          "percentile": 71.42857142857143,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 215.8023,
+          "stretches_above_per_100km": 28.729999633924198,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": 50.0,
+        "p_top5pct": 0.05,
+        "expected_stretches_above": 108.0,
+        "expected_stretches_above_per_100km": 50.045805813932475,
+        "ranked_length_km": 215.8023
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 13,
+          "ok": 217
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-09-21: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-09-21: at most 4 valid dates; protocol 7 needs 8."
+    },
+    "2023-10-03": {
+      "status": "ok",
+      "n_ranked": 219,
+      "ranked_length_km": 217.81470000000002,
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 63,
+          "n_ranked": 219,
+          "percentile": 71.68949771689498,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 217.81470000000002,
+          "stretches_above_per_100km": 28.464561850049602,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-016178",
+          "rank": 60,
+          "n_ranked": 219,
+          "percentile": 73.0593607305936,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 217.81470000000002,
+          "stretches_above_per_100km": 27.087244341176238,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 57,
+          "n_ranked": 219,
+          "percentile": 74.42922374429224,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 217.81470000000002,
+          "stretches_above_per_100km": 25.70992683230287,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": 50.0,
+        "p_top5pct": 0.05,
+        "expected_stretches_above": 109.0,
+        "expected_stretches_above_per_100km": 50.042536155732364,
+        "ranked_length_km": 217.81470000000002
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 11,
+          "ok": 219
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-10-03: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-10-03: at most 5 valid dates; protocol 7 needs 8."
+    },
+    "2023-10-15": {
+      "status": "ok",
+      "n_ranked": 227,
+      "ranked_length_km": 225.9122,
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 72,
+          "n_ranked": 227,
+          "percentile": 68.72246696035242,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 225.9122,
+          "stretches_above_per_100km": 31.42813889643853,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-016178",
+          "rank": 68,
+          "n_ranked": 227,
+          "percentile": 70.48458149779735,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 225.9122,
+          "stretches_above_per_100km": 29.657539521991282,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 65,
+          "n_ranked": 227,
+          "percentile": 71.80616740088107,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 225.9122,
+          "stretches_above_per_100km": 28.329589991155856,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": 50.0,
+        "p_top5pct": 0.05,
+        "expected_stretches_above": 113.0,
+        "expected_stretches_above_per_100km": 50.01943232813456,
+        "ranked_length_km": 225.9122
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 3,
+          "ok": 227
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-10-15: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-10-15: at most 6 valid dates; protocol 7 needs 8."
+    },
+    "2023-10-27": {
+      "status": "ok",
+      "n_ranked": 227,
+      "ranked_length_km": 225.9122,
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 68,
+          "n_ranked": 227,
+          "percentile": 70.48458149779735,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 225.9122,
+          "stretches_above_per_100km": 29.657539521991282,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "SUNKOS-W-01-000000",
+          "rank": 61,
+          "n_ranked": 227,
+          "percentile": 73.56828193832598,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 225.9122,
+          "stretches_above_per_100km": 26.558990616708613,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 57,
+          "n_ranked": 227,
+          "percentile": 75.33039647577093,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 225.9122,
+          "stretches_above_per_100km": 24.788391242261373,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      },
+      "random_expectation": {
+        "expected_percentile": 50.0,
+        "p_top5pct": 0.05,
+        "expected_stretches_above": 113.0,
+        "expected_stretches_above_per_100km": 50.01943232813456,
+        "ranked_length_km": 225.9122
+      },
+      "f1_baseline_rule": "all same-year orbit-121 dates before the control date (protocol 7, NC-A)",
+      "feature_status": {
+        "F1": {
+          "no_baseline": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 3,
+          "ok": 227
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "f1_note": "F1 status for 2023-10-27: no_baseline on 230 stretches. Baseline = same-year orbit-121 dates before 2023-10-27: at most 7 valid dates; protocol 7 needs 8."
+    }
+  },
+  "post_event_context": {
+    "2024-10-09": {
+      "status": "ok",
+      "post_event": true,
+      "n_ranked": 230,
+      "ranked_length_km": 228.6885,
+      "feature_status": {
+        "F1": {
+          "ok": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 1,
+          "ok": 229
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 224,
+          "n_ranked": 230,
+          "percentile": 3.04347826086957,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 97.51255528808838,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-016178",
+          "rank": 223,
+          "n_ranked": 230,
+          "percentile": 3.4782608695652195,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 97.07527925540637,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 221,
+          "n_ranked": 230,
+          "percentile": 4.347826086956519,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 96.20072719004234,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      }
+    },
+    "2024-10-21": {
+      "status": "ok",
+      "post_event": true,
+      "n_ranked": 230,
+      "ranked_length_km": 228.6885,
+      "feature_status": {
+        "F1": {
+          "ok": 230
+        },
+        "F2": {
+          "insufficient_uncensored": 1,
+          "ok": 229
+        },
+        "F7": {
+          "ok": 230
+        },
+        "F8": {
+          "ok": 230
+        },
+        "F4": {
+          "ok": 230
+        }
+      },
+      "targets": {
+        "T1": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 210,
+          "n_ranked": 230,
+          "percentile": 9.130434782608699,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 91.39069083054024,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        },
+        "T2": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-017189",
+          "rank": 210,
+          "n_ranked": 230,
+          "percentile": 9.130434782608699,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 91.39069083054024,
+          "n_targets_ranked": 3,
+          "n_targets": 3
+        },
+        "T3": {
+          "status": "ok",
+          "best_stretch": "KOSHI-W-03-012133",
+          "rank": 154,
+          "n_ranked": 230,
+          "percentile": 33.47826086956521,
+          "top1pct": false,
+          "top5pct": false,
+          "top10": false,
+          "ranked_length_km": 228.6885,
+          "stretches_above_per_100km": 66.90323300034763,
+          "n_targets_ranked": 1,
+          "n_targets": 1
+        }
+      }
+    }
+  },
+  "latest_risk_date": "2024-09-27",
+  "rank_over_time": {
+    "csv": "/Users/rounakchoudhary/Desktop/nitp_6th_sem_project/sarita/results/bandh/rank_over_time.csv",
+    "dates": [
+      "2024-01-07",
+      "2024-01-19",
+      "2024-01-31",
+      "2024-02-12",
+      "2024-02-24",
+      "2024-03-07",
+      "2024-04-12",
+      "2024-04-24",
+      "2024-05-06",
+      "2024-05-18",
+      "2024-05-30",
+      "2024-06-08",
+      "2024-06-11",
+      "2024-06-20",
+      "2024-06-23",
+      "2024-07-02",
+      "2024-07-05",
+      "2024-07-14",
+      "2024-07-17",
+      "2024-07-26",
+      "2024-07-29",
+      "2024-08-07",
+      "2024-08-10",
+      "2024-08-19",
+      "2024-08-22",
+      "2024-08-31",
+      "2024-09-03",
+      "2024-09-15",
+      "2024-09-24",
+      "2024-09-27",
+      "2024-10-06",
+      "2024-10-09",
+      "2024-10-18",
+      "2024-10-21",
+      "2024-10-30",
+      "2024-11-02",
+      "2024-11-14"
+    ]
+  },
+  "figures": [
+    "docs/bandh/figures/backtest_koshi_w03_features.png",
+    "docs/bandh/figures/backtest_top_stretches_map.png"
+  ],
+  "figures_note": "docs/bandh/figures/backtest_rank_over_time.png is written by scripts/bandh_backtest_figures.py, not by this module"
+}

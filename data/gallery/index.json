@@ -1,0 +1,873 @@
+{
+ "mock": false,
+ "chips": [
+  {
+   "name": "India_591317",
+   "event": "India",
+   "split": "test",
+   "water_fraction": 0.4635,
+   "iou": 0.877,
+   "f1": 0.9345,
+   "precision": 0.9142,
+   "recall": 0.9556,
+   "pred_water_fraction": 0.4547,
+   "labelled_fraction": 0.9386,
+   "mean_entropy_bits": 0.1977,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/India_591317_sar.png",
+    "label": "data/gallery/India_591317_label.png",
+    "pred": "data/gallery/India_591317_pred.png",
+    "unc": "data/gallery/India_591317_unc.png",
+    "error": "data/gallery/India_591317_error.png"
+   },
+   "thumb": "data/gallery/India_591317_thumb.jpg"
+  },
+  {
+   "name": "India_900498",
+   "event": "India",
+   "split": "test",
+   "water_fraction": 0.4731,
+   "iou": 0.7739,
+   "f1": 0.8725,
+   "precision": 0.8338,
+   "recall": 0.915,
+   "pred_water_fraction": 0.5194,
+   "labelled_fraction": 0.9994,
+   "mean_entropy_bits": 0.3064,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/India_900498_sar.png",
+    "label": "data/gallery/India_900498_label.png",
+    "pred": "data/gallery/India_900498_pred.png",
+    "unc": "data/gallery/India_900498_unc.png",
+    "error": "data/gallery/India_900498_error.png"
+   },
+   "thumb": "data/gallery/India_900498_thumb.jpg"
+  },
+  {
+   "name": "India_1018327",
+   "event": "India",
+   "split": "test",
+   "water_fraction": 0.1398,
+   "iou": 0.5598,
+   "f1": 0.7178,
+   "precision": 0.8972,
+   "recall": 0.5981,
+   "pred_water_fraction": 0.0932,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.2172,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/India_1018327_sar.png",
+    "label": "data/gallery/India_1018327_label.png",
+    "pred": "data/gallery/India_1018327_pred.png",
+    "unc": "data/gallery/India_1018327_unc.png",
+    "error": "data/gallery/India_1018327_error.png"
+   },
+   "thumb": "data/gallery/India_1018327_thumb.jpg"
+  },
+  {
+   "name": "India_570384",
+   "event": "India",
+   "split": "test",
+   "water_fraction": 0.0601,
+   "iou": 0.4453,
+   "f1": 0.6162,
+   "precision": 0.7828,
+   "recall": 0.508,
+   "pred_water_fraction": 0.0471,
+   "labelled_fraction": 0.9232,
+   "mean_entropy_bits": 0.2155,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/India_570384_sar.png",
+    "label": "data/gallery/India_570384_label.png",
+    "pred": "data/gallery/India_570384_pred.png",
+    "unc": "data/gallery/India_570384_unc.png",
+    "error": "data/gallery/India_570384_error.png"
+   },
+   "thumb": "data/gallery/India_570384_thumb.jpg"
+  },
+  {
+   "name": "India_747992",
+   "event": "India",
+   "split": "test",
+   "water_fraction": 0.4476,
+   "iou": 0.0214,
+   "f1": 0.042,
+   "precision": 0.957,
+   "recall": 0.0214,
+   "pred_water_fraction": 0.01,
+   "labelled_fraction": 0.9998,
+   "mean_entropy_bits": 0.2069,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/India_747992_sar.png",
+    "label": "data/gallery/India_747992_label.png",
+    "pred": "data/gallery/India_747992_pred.png",
+    "unc": "data/gallery/India_747992_unc.png",
+    "error": "data/gallery/India_747992_error.png"
+   },
+   "thumb": "data/gallery/India_747992_thumb.jpg"
+  },
+  {
+   "name": "Ghana_319168",
+   "event": "Ghana",
+   "split": "test",
+   "water_fraction": 0.2303,
+   "iou": 0.6863,
+   "f1": 0.814,
+   "precision": 0.92,
+   "recall": 0.7299,
+   "pred_water_fraction": 0.1753,
+   "labelled_fraction": 0.6547,
+   "mean_entropy_bits": 0.25,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Ghana_319168_sar.png",
+    "label": "data/gallery/Ghana_319168_label.png",
+    "pred": "data/gallery/Ghana_319168_pred.png",
+    "unc": "data/gallery/Ghana_319168_unc.png",
+    "error": "data/gallery/Ghana_319168_error.png"
+   },
+   "thumb": "data/gallery/Ghana_319168_thumb.jpg"
+  },
+  {
+   "name": "Ghana_866994",
+   "event": "Ghana",
+   "split": "test",
+   "water_fraction": 0.9018,
+   "iou": 0.628,
+   "f1": 0.7715,
+   "precision": 0.8742,
+   "recall": 0.6905,
+   "pred_water_fraction": 0.7599,
+   "labelled_fraction": 0.4483,
+   "mean_entropy_bits": 0.2001,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Ghana_866994_sar.png",
+    "label": "data/gallery/Ghana_866994_label.png",
+    "pred": "data/gallery/Ghana_866994_pred.png",
+    "unc": "data/gallery/Ghana_866994_unc.png",
+    "error": "data/gallery/Ghana_866994_error.png"
+   },
+   "thumb": "data/gallery/Ghana_866994_thumb.jpg"
+  },
+  {
+   "name": "Ghana_313799",
+   "event": "Ghana",
+   "split": "test",
+   "water_fraction": 0.0611,
+   "iou": 0.112,
+   "f1": 0.2014,
+   "precision": 0.954,
+   "recall": 0.1126,
+   "pred_water_fraction": 0.0067,
+   "labelled_fraction": 0.9326,
+   "mean_entropy_bits": 0.161,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Ghana_313799_sar.png",
+    "label": "data/gallery/Ghana_313799_label.png",
+    "pred": "data/gallery/Ghana_313799_pred.png",
+    "unc": "data/gallery/Ghana_313799_unc.png",
+    "error": "data/gallery/Ghana_313799_error.png"
+   },
+   "thumb": "data/gallery/Ghana_313799_thumb.jpg"
+  },
+  {
+   "name": "Mekong_382276",
+   "event": "Mekong",
+   "split": "test",
+   "water_fraction": 0.0374,
+   "iou": 0.9218,
+   "f1": 0.9593,
+   "precision": 0.9325,
+   "recall": 0.9877,
+   "pred_water_fraction": 0.0396,
+   "labelled_fraction": 0.9999,
+   "mean_entropy_bits": 0.1594,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Mekong_382276_sar.png",
+    "label": "data/gallery/Mekong_382276_label.png",
+    "pred": "data/gallery/Mekong_382276_pred.png",
+    "unc": "data/gallery/Mekong_382276_unc.png",
+    "error": "data/gallery/Mekong_382276_error.png"
+   },
+   "thumb": "data/gallery/Mekong_382276_thumb.jpg"
+  },
+  {
+   "name": "Mekong_424793",
+   "event": "Mekong",
+   "split": "test",
+   "water_fraction": 0.0155,
+   "iou": 0.4653,
+   "f1": 0.6351,
+   "precision": 0.5784,
+   "recall": 0.7042,
+   "pred_water_fraction": 0.0186,
+   "labelled_fraction": 0.986,
+   "mean_entropy_bits": 0.1326,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Mekong_424793_sar.png",
+    "label": "data/gallery/Mekong_424793_label.png",
+    "pred": "data/gallery/Mekong_424793_pred.png",
+    "unc": "data/gallery/Mekong_424793_unc.png",
+    "error": "data/gallery/Mekong_424793_error.png"
+   },
+   "thumb": "data/gallery/Mekong_424793_thumb.jpg"
+  },
+  {
+   "name": "Mekong_333434",
+   "event": "Mekong",
+   "split": "test",
+   "water_fraction": 0.0162,
+   "iou": 0.2071,
+   "f1": 0.3431,
+   "precision": 0.4837,
+   "recall": 0.2658,
+   "pred_water_fraction": 0.0112,
+   "labelled_fraction": 0.7749,
+   "mean_entropy_bits": 0.205,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Mekong_333434_sar.png",
+    "label": "data/gallery/Mekong_333434_label.png",
+    "pred": "data/gallery/Mekong_333434_pred.png",
+    "unc": "data/gallery/Mekong_333434_unc.png",
+    "error": "data/gallery/Mekong_333434_error.png"
+   },
+   "thumb": "data/gallery/Mekong_333434_thumb.jpg"
+  },
+  {
+   "name": "Nigeria_812045",
+   "event": "Nigeria",
+   "split": "test",
+   "water_fraction": 0.5065,
+   "iou": 0.9247,
+   "f1": 0.9609,
+   "precision": 0.9335,
+   "recall": 0.99,
+   "pred_water_fraction": 0.5727,
+   "labelled_fraction": 0.9046,
+   "mean_entropy_bits": 0.2155,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Nigeria_812045_sar.png",
+    "label": "data/gallery/Nigeria_812045_label.png",
+    "pred": "data/gallery/Nigeria_812045_pred.png",
+    "unc": "data/gallery/Nigeria_812045_unc.png",
+    "error": "data/gallery/Nigeria_812045_error.png"
+   },
+   "thumb": "data/gallery/Nigeria_812045_thumb.jpg"
+  },
+  {
+   "name": "Nigeria_225131",
+   "event": "Nigeria",
+   "split": "test",
+   "water_fraction": 0.0047,
+   "iou": 0.0609,
+   "f1": 0.1148,
+   "precision": 0.9718,
+   "recall": 0.061,
+   "pred_water_fraction": 0.0003,
+   "labelled_fraction": 0.9203,
+   "mean_entropy_bits": 0.1124,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Nigeria_225131_sar.png",
+    "label": "data/gallery/Nigeria_225131_label.png",
+    "pred": "data/gallery/Nigeria_225131_pred.png",
+    "unc": "data/gallery/Nigeria_225131_unc.png",
+    "error": "data/gallery/Nigeria_225131_error.png"
+   },
+   "thumb": "data/gallery/Nigeria_225131_thumb.jpg"
+  },
+  {
+   "name": "Nigeria_22088",
+   "event": "Nigeria",
+   "split": "test",
+   "water_fraction": 0.0028,
+   "iou": 0.0404,
+   "f1": 0.0776,
+   "precision": 0.0415,
+   "recall": 0.5994,
+   "pred_water_fraction": 0.1852,
+   "labelled_fraction": 0.8493,
+   "mean_entropy_bits": 0.1261,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Nigeria_22088_sar.png",
+    "label": "data/gallery/Nigeria_22088_label.png",
+    "pred": "data/gallery/Nigeria_22088_pred.png",
+    "unc": "data/gallery/Nigeria_22088_unc.png",
+    "error": "data/gallery/Nigeria_22088_error.png"
+   },
+   "thumb": "data/gallery/Nigeria_22088_thumb.jpg"
+  },
+  {
+   "name": "Pakistan_694942",
+   "event": "Pakistan",
+   "split": "test",
+   "water_fraction": 0.0965,
+   "iou": 0.879,
+   "f1": 0.9356,
+   "precision": 0.9889,
+   "recall": 0.8878,
+   "pred_water_fraction": 0.1516,
+   "labelled_fraction": 0.7303,
+   "mean_entropy_bits": 0.2116,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Pakistan_694942_sar.png",
+    "label": "data/gallery/Pakistan_694942_label.png",
+    "pred": "data/gallery/Pakistan_694942_pred.png",
+    "unc": "data/gallery/Pakistan_694942_unc.png",
+    "error": "data/gallery/Pakistan_694942_error.png"
+   },
+   "thumb": "data/gallery/Pakistan_694942_thumb.jpg"
+  },
+  {
+   "name": "Pakistan_70625",
+   "event": "Pakistan",
+   "split": "test",
+   "water_fraction": 0.0178,
+   "iou": 0.2181,
+   "f1": 0.3581,
+   "precision": 0.5244,
+   "recall": 0.2719,
+   "pred_water_fraction": 0.0092,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.1848,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Pakistan_70625_sar.png",
+    "label": "data/gallery/Pakistan_70625_label.png",
+    "pred": "data/gallery/Pakistan_70625_pred.png",
+    "unc": "data/gallery/Pakistan_70625_unc.png",
+    "error": "data/gallery/Pakistan_70625_error.png"
+   },
+   "thumb": "data/gallery/Pakistan_70625_thumb.jpg"
+  },
+  {
+   "name": "Pakistan_167553",
+   "event": "Pakistan",
+   "split": "test",
+   "water_fraction": 0.0059,
+   "iou": 0.038,
+   "f1": 0.0732,
+   "precision": 0.0716,
+   "recall": 0.0748,
+   "pred_water_fraction": 0.0059,
+   "labelled_fraction": 0.9426,
+   "mean_entropy_bits": 0.1668,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Pakistan_167553_sar.png",
+    "label": "data/gallery/Pakistan_167553_label.png",
+    "pred": "data/gallery/Pakistan_167553_pred.png",
+    "unc": "data/gallery/Pakistan_167553_unc.png",
+    "error": "data/gallery/Pakistan_167553_error.png"
+   },
+   "thumb": "data/gallery/Pakistan_167553_thumb.jpg"
+  },
+  {
+   "name": "Paraguay_790830",
+   "event": "Paraguay",
+   "split": "test",
+   "water_fraction": 0.1223,
+   "iou": 0.9143,
+   "f1": 0.9552,
+   "precision": 0.9366,
+   "recall": 0.9745,
+   "pred_water_fraction": 0.1268,
+   "labelled_fraction": 0.9964,
+   "mean_entropy_bits": 0.1296,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Paraguay_790830_sar.png",
+    "label": "data/gallery/Paraguay_790830_label.png",
+    "pred": "data/gallery/Paraguay_790830_pred.png",
+    "unc": "data/gallery/Paraguay_790830_unc.png",
+    "error": "data/gallery/Paraguay_790830_error.png"
+   },
+   "thumb": "data/gallery/Paraguay_790830_thumb.jpg"
+  },
+  {
+   "name": "Paraguay_280900",
+   "event": "Paraguay",
+   "split": "test",
+   "water_fraction": 0.0251,
+   "iou": 0.607,
+   "f1": 0.7555,
+   "precision": 0.8254,
+   "recall": 0.6964,
+   "pred_water_fraction": 0.0212,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.1356,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Paraguay_280900_sar.png",
+    "label": "data/gallery/Paraguay_280900_label.png",
+    "pred": "data/gallery/Paraguay_280900_pred.png",
+    "unc": "data/gallery/Paraguay_280900_unc.png",
+    "error": "data/gallery/Paraguay_280900_error.png"
+   },
+   "thumb": "data/gallery/Paraguay_280900_thumb.jpg"
+  },
+  {
+   "name": "Paraguay_511199",
+   "event": "Paraguay",
+   "split": "test",
+   "water_fraction": 0.044,
+   "iou": 0.4192,
+   "f1": 0.5908,
+   "precision": 0.612,
+   "recall": 0.571,
+   "pred_water_fraction": 0.0411,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.1995,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Paraguay_511199_sar.png",
+    "label": "data/gallery/Paraguay_511199_label.png",
+    "pred": "data/gallery/Paraguay_511199_pred.png",
+    "unc": "data/gallery/Paraguay_511199_unc.png",
+    "error": "data/gallery/Paraguay_511199_error.png"
+   },
+   "thumb": "data/gallery/Paraguay_511199_thumb.jpg"
+  },
+  {
+   "name": "Somalia_322855",
+   "event": "Somalia",
+   "split": "test",
+   "water_fraction": 0.1754,
+   "iou": 0.6194,
+   "f1": 0.765,
+   "precision": 0.7595,
+   "recall": 0.7706,
+   "pred_water_fraction": 0.1778,
+   "labelled_fraction": 0.9729,
+   "mean_entropy_bits": 0.2556,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Somalia_322855_sar.png",
+    "label": "data/gallery/Somalia_322855_label.png",
+    "pred": "data/gallery/Somalia_322855_pred.png",
+    "unc": "data/gallery/Somalia_322855_unc.png",
+    "error": "data/gallery/Somalia_322855_error.png"
+   },
+   "thumb": "data/gallery/Somalia_322855_thumb.jpg"
+  },
+  {
+   "name": "Somalia_94102",
+   "event": "Somalia",
+   "split": "test",
+   "water_fraction": 0.0526,
+   "iou": 0.5704,
+   "f1": 0.7264,
+   "precision": 0.9704,
+   "recall": 0.5805,
+   "pred_water_fraction": 0.029,
+   "labelled_fraction": 0.9207,
+   "mean_entropy_bits": 0.1383,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Somalia_94102_sar.png",
+    "label": "data/gallery/Somalia_94102_label.png",
+    "pred": "data/gallery/Somalia_94102_pred.png",
+    "unc": "data/gallery/Somalia_94102_unc.png",
+    "error": "data/gallery/Somalia_94102_error.png"
+   },
+   "thumb": "data/gallery/Somalia_94102_thumb.jpg"
+  },
+  {
+   "name": "Somalia_685158",
+   "event": "Somalia",
+   "split": "test",
+   "water_fraction": 0.1371,
+   "iou": 0.2573,
+   "f1": 0.4092,
+   "precision": 0.7245,
+   "recall": 0.2851,
+   "pred_water_fraction": 0.0455,
+   "labelled_fraction": 0.7026,
+   "mean_entropy_bits": 0.2198,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Somalia_685158_sar.png",
+    "label": "data/gallery/Somalia_685158_label.png",
+    "pred": "data/gallery/Somalia_685158_pred.png",
+    "unc": "data/gallery/Somalia_685158_unc.png",
+    "error": "data/gallery/Somalia_685158_error.png"
+   },
+   "thumb": "data/gallery/Somalia_685158_thumb.jpg"
+  },
+  {
+   "name": "Spain_5650136",
+   "event": "Spain",
+   "split": "test",
+   "water_fraction": 0.6073,
+   "iou": 0.8721,
+   "f1": 0.9317,
+   "precision": 0.8898,
+   "recall": 0.9777,
+   "pred_water_fraction": 0.4368,
+   "labelled_fraction": 0.6546,
+   "mean_entropy_bits": 0.171,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Spain_5650136_sar.png",
+    "label": "data/gallery/Spain_5650136_label.png",
+    "pred": "data/gallery/Spain_5650136_pred.png",
+    "unc": "data/gallery/Spain_5650136_unc.png",
+    "error": "data/gallery/Spain_5650136_error.png"
+   },
+   "thumb": "data/gallery/Spain_5650136_thumb.jpg"
+  },
+  {
+   "name": "Spain_7370579",
+   "event": "Spain",
+   "split": "test",
+   "water_fraction": 0.2673,
+   "iou": 0.5991,
+   "f1": 0.7493,
+   "precision": 0.807,
+   "recall": 0.6993,
+   "pred_water_fraction": 0.2315,
+   "labelled_fraction": 0.9996,
+   "mean_entropy_bits": 0.2722,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Spain_7370579_sar.png",
+    "label": "data/gallery/Spain_7370579_label.png",
+    "pred": "data/gallery/Spain_7370579_pred.png",
+    "unc": "data/gallery/Spain_7370579_unc.png",
+    "error": "data/gallery/Spain_7370579_error.png"
+   },
+   "thumb": "data/gallery/Spain_7370579_thumb.jpg"
+  },
+  {
+   "name": "Spain_6095801",
+   "event": "Spain",
+   "split": "test",
+   "water_fraction": 0.0868,
+   "iou": 0.3488,
+   "f1": 0.5172,
+   "precision": 0.5865,
+   "recall": 0.4626,
+   "pred_water_fraction": 0.0684,
+   "labelled_fraction": 0.9997,
+   "mean_entropy_bits": 0.2029,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Spain_6095801_sar.png",
+    "label": "data/gallery/Spain_6095801_label.png",
+    "pred": "data/gallery/Spain_6095801_pred.png",
+    "unc": "data/gallery/Spain_6095801_unc.png",
+    "error": "data/gallery/Spain_6095801_error.png"
+   },
+   "thumb": "data/gallery/Spain_6095801_thumb.jpg"
+  },
+  {
+   "name": "Sri-Lanka_534068",
+   "event": "Sri-Lanka",
+   "split": "test",
+   "water_fraction": 0.9814,
+   "iou": 0.9933,
+   "f1": 0.9966,
+   "precision": 0.9944,
+   "recall": 0.9989,
+   "pred_water_fraction": 0.9858,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.2922,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Sri-Lanka_534068_sar.png",
+    "label": "data/gallery/Sri-Lanka_534068_label.png",
+    "pred": "data/gallery/Sri-Lanka_534068_pred.png",
+    "unc": "data/gallery/Sri-Lanka_534068_unc.png",
+    "error": "data/gallery/Sri-Lanka_534068_error.png"
+   },
+   "thumb": "data/gallery/Sri-Lanka_534068_thumb.jpg"
+  },
+  {
+   "name": "Sri-Lanka_377277",
+   "event": "Sri-Lanka",
+   "split": "test",
+   "water_fraction": 0.0332,
+   "iou": 0.4759,
+   "f1": 0.6449,
+   "precision": 0.644,
+   "recall": 0.6458,
+   "pred_water_fraction": 0.0329,
+   "labelled_fraction": 0.9895,
+   "mean_entropy_bits": 0.1755,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Sri-Lanka_377277_sar.png",
+    "label": "data/gallery/Sri-Lanka_377277_label.png",
+    "pred": "data/gallery/Sri-Lanka_377277_pred.png",
+    "unc": "data/gallery/Sri-Lanka_377277_unc.png",
+    "error": "data/gallery/Sri-Lanka_377277_error.png"
+   },
+   "thumb": "data/gallery/Sri-Lanka_377277_thumb.jpg"
+  },
+  {
+   "name": "Sri-Lanka_450918",
+   "event": "Sri-Lanka",
+   "split": "test",
+   "water_fraction": 0.0431,
+   "iou": 0.0,
+   "f1": 0.0,
+   "precision": null,
+   "recall": 0.0,
+   "pred_water_fraction": 0.5153,
+   "labelled_fraction": 0.3781,
+   "mean_entropy_bits": 0.1125,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Sri-Lanka_450918_sar.png",
+    "label": "data/gallery/Sri-Lanka_450918_label.png",
+    "pred": "data/gallery/Sri-Lanka_450918_pred.png",
+    "unc": "data/gallery/Sri-Lanka_450918_unc.png",
+    "error": "data/gallery/Sri-Lanka_450918_error.png"
+   },
+   "thumb": "data/gallery/Sri-Lanka_450918_thumb.jpg"
+  },
+  {
+   "name": "USA_905409",
+   "event": "USA",
+   "split": "test",
+   "water_fraction": 0.1697,
+   "iou": 0.941,
+   "f1": 0.9696,
+   "precision": 0.9822,
+   "recall": 0.9573,
+   "pred_water_fraction": 0.1653,
+   "labelled_fraction": 0.9998,
+   "mean_entropy_bits": 0.1273,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/USA_905409_sar.png",
+    "label": "data/gallery/USA_905409_label.png",
+    "pred": "data/gallery/USA_905409_pred.png",
+    "unc": "data/gallery/USA_905409_unc.png",
+    "error": "data/gallery/USA_905409_error.png"
+   },
+   "thumb": "data/gallery/USA_905409_thumb.jpg"
+  },
+  {
+   "name": "USA_430764",
+   "event": "USA",
+   "split": "test",
+   "water_fraction": 0.0589,
+   "iou": 0.4512,
+   "f1": 0.6218,
+   "precision": 0.7985,
+   "recall": 0.5092,
+   "pred_water_fraction": 0.0376,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.1727,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/USA_430764_sar.png",
+    "label": "data/gallery/USA_430764_label.png",
+    "pred": "data/gallery/USA_430764_pred.png",
+    "unc": "data/gallery/USA_430764_unc.png",
+    "error": "data/gallery/USA_430764_error.png"
+   },
+   "thumb": "data/gallery/USA_430764_thumb.jpg"
+  },
+  {
+   "name": "USA_595451",
+   "event": "USA",
+   "split": "test",
+   "water_fraction": 0.0783,
+   "iou": 0.3232,
+   "f1": 0.4885,
+   "precision": 0.3477,
+   "recall": 0.8209,
+   "pred_water_fraction": 0.1849,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.1704,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/USA_595451_sar.png",
+    "label": "data/gallery/USA_595451_label.png",
+    "pred": "data/gallery/USA_595451_pred.png",
+    "unc": "data/gallery/USA_595451_unc.png",
+    "error": "data/gallery/USA_595451_error.png"
+   },
+   "thumb": "data/gallery/USA_595451_thumb.jpg"
+  },
+  {
+   "name": "Bolivia_129334",
+   "event": "Bolivia",
+   "split": "bolivia",
+   "water_fraction": 0.6587,
+   "iou": 0.8292,
+   "f1": 0.9066,
+   "precision": 0.9276,
+   "recall": 0.8866,
+   "pred_water_fraction": 0.6573,
+   "labelled_fraction": 0.9072,
+   "mean_entropy_bits": 0.3969,
+   "stratum": "high",
+   "images": {
+    "sar": "data/gallery/Bolivia_129334_sar.png",
+    "label": "data/gallery/Bolivia_129334_label.png",
+    "pred": "data/gallery/Bolivia_129334_pred.png",
+    "unc": "data/gallery/Bolivia_129334_unc.png",
+    "error": "data/gallery/Bolivia_129334_error.png"
+   },
+   "thumb": "data/gallery/Bolivia_129334_thumb.jpg"
+  },
+  {
+   "name": "Bolivia_60373",
+   "event": "Bolivia",
+   "split": "bolivia",
+   "water_fraction": 0.0627,
+   "iou": 0.7287,
+   "f1": 0.8431,
+   "precision": 0.8701,
+   "recall": 0.8176,
+   "pred_water_fraction": 0.2017,
+   "labelled_fraction": 0.7592,
+   "mean_entropy_bits": 0.1692,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Bolivia_60373_sar.png",
+    "label": "data/gallery/Bolivia_60373_label.png",
+    "pred": "data/gallery/Bolivia_60373_pred.png",
+    "unc": "data/gallery/Bolivia_60373_unc.png",
+    "error": "data/gallery/Bolivia_60373_error.png"
+   },
+   "thumb": "data/gallery/Bolivia_60373_thumb.jpg"
+  },
+  {
+   "name": "Bolivia_379434",
+   "event": "Bolivia",
+   "split": "bolivia",
+   "water_fraction": 0.0412,
+   "iou": 0.2774,
+   "f1": 0.4343,
+   "precision": 0.3983,
+   "recall": 0.4776,
+   "pred_water_fraction": 0.0494,
+   "labelled_fraction": 1.0,
+   "mean_entropy_bits": 0.2335,
+   "stratum": "median",
+   "images": {
+    "sar": "data/gallery/Bolivia_379434_sar.png",
+    "label": "data/gallery/Bolivia_379434_label.png",
+    "pred": "data/gallery/Bolivia_379434_pred.png",
+    "unc": "data/gallery/Bolivia_379434_unc.png",
+    "error": "data/gallery/Bolivia_379434_error.png"
+   },
+   "thumb": "data/gallery/Bolivia_379434_thumb.jpg"
+  },
+  {
+   "name": "Bolivia_242570",
+   "event": "Bolivia",
+   "split": "bolivia",
+   "water_fraction": 0.1558,
+   "iou": 0.0394,
+   "f1": 0.0758,
+   "precision": 0.5368,
+   "recall": 0.0408,
+   "pred_water_fraction": 0.0103,
+   "labelled_fraction": 0.6695,
+   "mean_entropy_bits": 0.1928,
+   "stratum": "low",
+   "images": {
+    "sar": "data/gallery/Bolivia_242570_sar.png",
+    "label": "data/gallery/Bolivia_242570_label.png",
+    "pred": "data/gallery/Bolivia_242570_pred.png",
+    "unc": "data/gallery/Bolivia_242570_unc.png",
+    "error": "data/gallery/Bolivia_242570_error.png"
+   },
+   "thumb": "data/gallery/Bolivia_242570_thumb.jpg"
+  }
+ ],
+ "model": "r34_s0",
+ "threshold": 0.5,
+ "tta": true,
+ "prediction": "8-view dihedral TTA probabilities saved by sarita.evaluate, thresholded at 0.5",
+ "metrics_note": "per-chip scores on hand-labelled pixels (benchmark protocol)",
+ "legend": {
+  "sar": {
+   "VV backscatter": "-25 dB (black) to 0 dB (white)"
+  },
+  "label": {
+   "Water": "#2B6CB0",
+   "Not water": "#ECEEE8",
+   "Not labelled": "#C3CAD2"
+  },
+  "pred": {
+   "Water": "#2B6CB0",
+   "Not water": "#ECEEE8"
+  },
+  "unc": {
+   "colormap": "magma",
+   "min": "0 bits (certain)",
+   "max": "1 bit (p = 0.5)",
+   "stops": [
+    "#000004",
+    "#51127C",
+    "#B73779",
+    "#FC8961",
+    "#FCFDBF"
+   ]
+  },
+  "error": {
+   "TP": "#2B6CB0",
+   "FP": "#E4572E",
+   "FN": "#F2C14E",
+   "TN": "transparent",
+   "Not labelled": "#C3CAD2"
+  }
+ },
+ "events": [
+  "Bolivia",
+  "Ghana",
+  "India",
+  "Mekong",
+  "Nigeria",
+  "Pakistan",
+  "Paraguay",
+  "Somalia",
+  "Spain",
+  "Sri-Lanka",
+  "USA"
+ ],
+ "splits": {
+  "test": {
+   "chips": 90,
+   "events": [
+    "Ghana",
+    "India",
+    "Mekong",
+    "Nigeria",
+    "Pakistan",
+    "Paraguay",
+    "Somalia",
+    "Spain",
+    "Sri-Lanka",
+    "USA"
+   ]
+  },
+  "bolivia": {
+   "chips": 15,
+   "events": [
+    "Bolivia"
+   ]
+  }
+ },
+ "source": "sarita.export_web",
+ "generated": "2026-10-24T08:58:26+05:30"
+}

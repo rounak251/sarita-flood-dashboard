@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b5d3b">
+  <meta name="description" content="Bandh-Mitra: embankment patrol reports for SARITA Bandh-Rakshak. Works offline.">
+  <title>Bandh-Mitra · बांध-मित्र</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="brand-name" id="app-title">बांध-मित्र</span>
+      <span class="brand-sub" id="app-sub">तटबंध गश्त रिपोर्ट</span>
+    </div>
+    <div class="lang" role="group" aria-label="Language / भाषा">
+      <button type="button" class="lang-btn" data-lang="hi" aria-pressed="true">हिन्दी</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" class="lang-btn" data-lang="mai" aria-pressed="false">मैथिली <span class="draft-tag" data-draft-tag>ड्राफ़्ट</span></button>
+    </div>
+  </header>
+
+  <div id="offline-banner" class="banner" role="status" aria-live="polite" hidden></div>
+  <div id="flash" class="flash" role="status" aria-live="polite" hidden></div>
+
+  <main>
+    <!-- HOME -->
+    <section id="view-home" class="view" aria-labelledby="home-h">
+      <h1 id="home-h" class="sr-only">Bandh-Mitra</h1>
+      <button type="button" class="big big-primary" id="btn-new" data-i18n="home_new">नई रिपोर्ट भेजें</button>
+      <button type="button" class="big big-ok" id="btn-ok" data-i18n="home_ok">सब ठीक है (जाँच दर्ज करें)</button>
+      <button type="button" class="big big-plain" id="btn-mine" data-i18n="home_mine">मेरी रिपोर्ट</button>
+      <p class="disclaimer" data-i18n="disclaimer">यह मैदान की जानकारी है।</p>
+    </section>
+
+    <!-- NEW REPORT -->
+    <section id="view-form" class="view" aria-labelledby="form-h" hidden>
+      <div class="view-head">
+        <button type="button" class="back" data-go="home" data-i18n="back">वापस</button>
+        <h1 id="form-h" data-i18n="form_title">नई रिपोर्ट</h1>
+      </div>
+      <form id="report-form" novalidate>
+        <fieldset class="field">
+          <legend data-i18n="stretch">तटबंध का हिस्सा</legend>
+          <p class="hint" id="gps-status" role="status"></p>
+          <label class="sr-only" for="stretch" data-i18n="stretch">तटबंध का हिस्सा</label>
+          <select id="stretch" class="control"></select>
+          <p class="hint" id="list-status" role="status"></p>
+        </fieldset>
+
+        <fieldset class="field" id="type-field">
+          <legend data-i18n="type">क्या दिखा?</legend>
+          <div class="type-grid" id="type-grid"></div>
+          <p class="error" id="err-type" hidden></p>
+        </fieldset>
+
+        <fieldset class="field" id="sev-field">
+          <legend data-i18n="severity">कितना गंभीर?</legend>
+          <div class="sev-row" id="sev-row">
+            <button type="button" class="sev sev-1" data-sev="1" aria-pressed="false"><span data-i18n="sev1">हल्का</span></button>
+            <button type="button" class="sev sev-2" data-sev="2" aria-pressed="false"><span data-i18n="sev2">मध्यम</span></button>
+            <button type="button" class="sev sev-3" data-sev="3" aria-pressed="false"><span data-i18n="sev3">गंभीर</span></button>
+          </div>
+          <p class="error" id="err-sev" hidden></p>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend data-i18n="photo">फोटो लें</legend>
+          <label class="big big-photo" id="photo-label">
+            <input type="file" id="photo" accept="image/*" capture="environment" class="sr-only">
+            <span id="photo-text" data-i18n="photo">फोटो लें</span>
+          </label>
+          <p class="hint" id="photo-status" role="status"></p>
+          <div class="preview" id="preview" hidden>
+            <img id="preview-img" alt="">
+            <button type="button" class="link" id="photo-remove" data-i18n="photo_remove">फोटो हटाएँ</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend data-i18n="note">टिप्पणी (वैकल्पिक)</legend>
+          <label class="sr-only" for="note" data-i18n="note">टिप्पणी</label>
+          <textarea id="note" class="control" rows="3" maxlength="500" data-i18n-placeholder="note_hint"></textarea>
+        </fieldset>
+
+        <button type="submit" class="big big-primary" id="btn-submit" data-i18n="submit">भेजें</button>
+      </form>
+    </section>
+
+    <!-- MY REPORTS -->
+    <section id="view-mine" class="view" aria-labelledby="mine-h" hidden>
+      <div class="view-head">
+        <button type="button" class="back" data-go="home" data-i18n="back">वापस</button>
+        <h1 id="mine-h" data-i18n="mine_title">मेरी रिपोर्ट</h1>
+      </div>
+      <button type="button" class="big big-plain" id="btn-retry" data-i18n="mine_retry">अभी फिर से भेजें</button>
+      <ul class="list" id="mine-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="strings.js"></script>
+  <script src="queue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

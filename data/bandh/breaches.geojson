@@ -1,0 +1,263 @@
+{
+ "type": "FeatureCollection",
+ "name": "bandh_breaches",
+ "schema": "bandh.breaches.v1",
+ "crs": "EPSG:4326",
+ "aoi_bbox": [
+  85.6,
+  25.55,
+  87.2,
+  26.75
+ ],
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     86.365188,
+     25.995248
+    ]
+   },
+   "properties": {
+    "breach_id": "KOSI-2024-09-DARBHANGA-BHUBHAUL",
+    "river": "Kosi (Koshi)",
+    "embankment": "Kosi western embankment (reported as 'western embankment near Bhubhol')",
+    "district": "Darbhanga",
+    "village": "Bhubhaul / Bhubhol / Bhobhaul / Bhabhoul (spellings vary across sources)",
+    "date": "2024-09-29",
+    "time_local": "late night, 29 Sep 2024 (Down To Earth); 'around midnight' (The Wire, via search summary)",
+    "location_precision_m": 5000.0,
+    "location_note": "lat/lon = Kiratpur block/admin centroid from Nominatim (not the village point). Village itself not geocoded (Nominatim returned no match for 'Bhubhol Darbhanga'). Real breach point could be several km from this centroid.; block conflict between sources: Kiratpur (per Patna/multiple reports); Kartarpur (per Down To Earth) - CONFLICT, unresolved",
+    "width_m": null,
+    "width_note": "~24 (reported as ~80 ft / 'roughly 80 feet' by The Wire via search summary; NOT verified on the article itself)",
+    "cause_note": "Swollen Kosi after Birpur Barrage releases of ~661,000 cusecs (Down To Earth). Breach mechanism (overtopping vs seepage/piping vs erosion) NOT stated in any source read.",
+    "prior_warning_signs": "None site-specific found. Bihar Disaster Management Dept cited 'reports of embankment breach and seepage at several places since September 29'; Water Resources Dept cited 'reports of seepage at a few places' - neither tied to this stretch. No evidence of pre-breach lead time found.",
+    "impact_notes": "~25 villages submerged (search summary citing a report); 15-16 pucca houses in Bhubhol fully damaged (Down To Earth). Figures are secondary reports, unverified.",
+    "sources": [
+     "https://www.downtoearth.org.in/natural-disasters/swollen-kosi-bagmati-gandak-breach-embankments-wreak-havoc-in-flood-hit-bihar (date, western embankment near Bhubhol, Kartarpur block, Birpur 661,000 cusecs, seepage generic)",
+     "https://thewire.in/rights/bihar-flood-kosi-embankment-breached (date/width via search summary; article body NOT retrieved - headline and nav only)",
+     "https://wikiwand.com/en/articles/2024_Koshi_flood (secondary; Kiratpur/Ghanshyampur flooding, no breach detail; Wikipedia en 2024_Koshi_flood fetched with no village-level breach list)",
+     "https://en.wikipedia.org/wiki/2024_Koshi_flood (fetched: general, 'broke river embankments at several places', Darbhanga Kiratpur/Ghanshyampur blocks, 28 Sep flood date)"
+    ],
+    "in_aoi": true,
+    "used_in_backtest": true,
+    "unconfirmed": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85.394562,
+     26.432285
+    ]
+   },
+   "properties": {
+    "breach_id": "BAGMATI-2024-09-SITAMARHI-BELSAND",
+    "river": "Bagmati",
+    "embankment": "Bagmati embankment (embankment name not stated)",
+    "district": "Sitamarhi",
+    "village": "Madhkaul (also Olipur, Zafarpur, Madar named as flooded/evacuated; breach village not confirmed)",
+    "date": "2024-09-29",
+    "time_local": "not stated",
+    "location_precision_m": 10000.0,
+    "location_note": "lat/lon = Belsand block admin centroid (Nominatim). 'Madhkaul' alone returned no Nominatim match. Lon 85.39 is west of bbox min lon 85.60 by ~20 km, so outside bbox even with 10 km precision.",
+    "width_m": null,
+    "width_note": null,
+    "cause_note": "Swollen river (Down To Earth). Mechanism not stated.",
+    "prior_warning_signs": "None found.",
+    "impact_notes": "Search summary: ~2,000 families displaced in Madhkaul, Olipur, Zafarpur, Madar; >50,000 people affected (secondary, unverified). Another report describes a separate Sunday breach at Madhkaul (see BAGMATI-2024-09-SITAMARHI-MADHKAUL).",
+    "sources": [
+     "https://www.downtoearth.org.in/natural-disasters/swollen-kosi-bagmati-gandak-breach-embankments-wreak-havoc-in-flood-hit-bihar (fetched: 'swollen Bagmati breached its embankment in Belsand block in Sitamarhi on September 29')",
+     "https://www.millenniumpost.in/nation/bihar-floods-situation-comes-to-a-head-as-several-embankments-breached-581626 (search result only, not fetched)",
+     "https://theprint.in/india/bihar-flood-situation-grim-several-embankments-breached/2289779 (search result only, not fetched)"
+    ],
+    "in_aoi": false,
+    "used_in_backtest": false,
+    "unconfirmed": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "breach_id": "BAGMATI-2024-09-SITAMARHI-MADHKAUL",
+    "river": "Bagmati",
+    "embankment": "Bagmati embankment at Madhkaul",
+    "district": "Sitamarhi",
+    "village": "Madhkaul",
+    "date": "reported as a Sunday; 2024-09-29 was a Sunday - probable match to same event as BAGMATI-2024-09-SITAMARHI-BELSAND; UNCONFIRMED",
+    "time_local": "not stated",
+    "location_precision_m": 5000.0,
+    "location_note": "location precision not stated in source; 5 km block-centroid convention assumed; Nominatim returned no match for 'Madhkaul'. Do not use coordinates for this record until village point is resolved from OSM or a Hindi source.",
+    "width_m": null,
+    "width_note": null,
+    "cause_note": "Excessive water pressure (search summary; also says Gandak embankment in West Champaran damaged). Mechanism not stated.",
+    "prior_warning_signs": "None found.",
+    "impact_notes": "Also reported that floodwater entered Valmiki Tiger Reserve from Madhkaul/Gandak damage (search summary).",
+    "sources": [
+     "Search summary (WebSearch 2026-11-03) citing a report of a Sunday Madhkaul breach; the report URL was not captured. Treat as LEAD ONLY."
+    ],
+    "in_aoi": false,
+    "used_in_backtest": false,
+    "unconfirmed": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "breach_id": "BAGMATI-2024-09-SHEOHAR-TARIYANI",
+    "river": "Bagmati",
+    "embankment": "Bagmati embankment (name not stated)",
+    "district": "Sheohar",
+    "village": "not identified",
+    "date": "2024-09-29 or 2024-09-30 (Down To Earth: 'Bagmati breached its embankments in Sitamarhi and Sheohar districts'; date for Sheohar not specific)",
+    "time_local": "evening (search summary: 'this evening')",
+    "location_precision_m": 5000.0,
+    "location_note": "location precision not stated in source; 5 km block-centroid convention assumed; 'Tariyani Sheohar' returned no Nominatim match. Coordinates intentionally left null.",
+    "width_m": null,
+    "width_note": null,
+    "cause_note": "Massive pressure of the Bagmati (search summary)",
+    "prior_warning_signs": "None found.",
+    "impact_notes": "Unverified.",
+    "sources": [
+     "https://www.downtoearth.org.in/natural-disasters/swollen-kosi-bagmati-gandak-breach-embankments-wreak-havoc-in-flood-hit-bihar (fetched: Sheohar breach mentioned, no block/village)",
+     "Search summary citing Tariyani block breach (report URL not captured)"
+    ],
+    "in_aoi": false,
+    "used_in_backtest": false,
+    "unconfirmed": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.206464,
+     27.059011
+    ]
+   },
+   "properties": {
+    "breach_id": "GANDAK-2024-09-WESTCHAMPARAN-KHAIRATWA",
+    "river": "Gandak",
+    "embankment": "Champaran embankment (Gandak) - name as reported",
+    "district": "West Champaran",
+    "village": "Khairatwa (also spelled Khairtwa)",
+    "date": "Sept 2024 (Patna Press, ThePrint); one report says 29 Sep 2024, 5:00 pm, at km 4.50. Other search-summary item gives a 'Monday night'. CONFLICTING - verify.",
+    "time_local": "5:00 pm (one report, date unconfirmed); 'Monday night' (another)",
+    "location_precision_m": 15000.0,
+    "location_note": "lat/lon = Bagaha town/admin centroid (Nominatim); Khairatwa itself not geocoded. Lon 84.2 is far west of bbox.",
+    "width_m": 10.0,
+    "width_note": null,
+    "cause_note": "Sudden subsidence at Khairatwa (one account); swollen river after Valmikinagar Barrage releases of 562,000 cusecs (Down To Earth) / 5.62 lakh cusecs (search summary). Mechanism not stated.",
+    "prior_warning_signs": "None site-specific found.",
+    "impact_notes": "Water inundated Valmiki Tiger Reserve and surroundings (search summary). No wildlife damage reported per that source.",
+    "sources": [
+     "https://patnapress.com/bihar-flood-update-gandak-and-koshi-rivers-overflow-embankment-breached/ (search result; Khairatwa breach description)",
+     "https://theprint.in/india/bihar-flood-situation-grim-several-embankments-breached/2289779 (search result only)",
+     "https://www.downtoearth.org.in/natural-disasters/swollen-kosi-bagmati-gandak-breach-embankments-wreak-havoc-in-flood-hit-bihar (fetched: Gandak breach in Western Champaran, no village, Valmikinagar 562,000 cusecs 28 Sep)"
+    ],
+    "in_aoi": false,
+    "used_in_backtest": false,
+    "unconfirmed": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     84.394652,
+     26.752298
+    ]
+   },
+   "properties": {
+    "breach_id": "GANDAK-2024-09-WESTCHAMPARAN-PHULIYAKHAR",
+    "river": "Gandak",
+    "embankment": "Champaran embankment (Gandak) - name not stated",
+    "district": "West Champaran",
+    "village": "Phuliyakhar",
+    "date": "Sept 2024 (search summary; exact date not confirmed)",
+    "time_local": "not stated",
+    "location_precision_m": 5000.0,
+    "location_note": "lat/lon = Bairia block admin centroid (Nominatim). Village not geocoded.",
+    "width_m": null,
+    "width_note": null,
+    "cause_note": "not stated",
+    "prior_warning_signs": "None found.",
+    "impact_notes": "Unverified.",
+    "sources": [
+     "Search summary citing a second West Champaran breach at Phuliyakhar in Bairia block (report URL not captured). Treat as LEAD ONLY."
+    ],
+    "in_aoi": false,
+    "used_in_backtest": false,
+    "unconfirmed": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     86.340392,
+     26.287153
+    ]
+   },
+   "properties": {
+    "breach_id": "KAMLA-2019-07-MADHUBANI-NARUAR",
+    "river": "Kamla (Kamla Balan)",
+    "embankment": "Kamla Balan embankment (Jhanjharpur section)",
+    "district": "Madhubani",
+    "village": "Naruar (also: Gopalakha - two points, Rakhawari, Jainagar/Gorhaiya - per same account)",
+    "date": "2019-07-15",
+    "time_local": "00:12 hrs, 15 Jul 2019 (first-person account; the search summary also says 'around midnight')",
+    "location_precision_m": 5000.0,
+    "location_note": "lat/lon = Jhanjharpur block admin centroid. Naruar not geocoded (no Nominatim match tested).",
+    "width_m": null,
+    "width_note": null,
+    "cause_note": "not stated in the account",
+    "prior_warning_signs": "None found. Account says the same embankment breached at four other places in Madhubani district.",
+    "impact_notes": "Floodwater reached the premises within about three hours (first-person account, unverified).",
+    "sources": [
+     "https://admin.indiawaterportal.org/articles/kamla-kosi-and-bagmati-rivers-rage-disrupt-life (search result, likely source of 2019 account - ATTRIBUTION NOT CONFIRMED by fetch)",
+     "Search summary: 'The embankment on the river Kamala breached at 00.12 hrs on July 15, 2019 in my village'. Exact page URL not captured."
+    ],
+    "in_aoi": true,
+    "used_in_backtest": false,
+    "unconfirmed": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "breach_id": "KUSAHA-2008-08-18-NEPAL",
+    "river": "Kosi (Koshi)",
+    "embankment": "Eastern Kosi embankment (Koshi embankment) near Indo-Nepal border",
+    "district": "Sunsari (Nepal) - breach location; Supaul (Bihar) worst-hit",
+    "village": "Kusaha",
+    "date": "2008-08-18",
+    "time_local": "not stated",
+    "location_precision_m": 5000.0,
+    "location_note": "location precision not stated in source; 5 km block-centroid convention assumed; Coordinates intentionally null. Do not infer from district centroid.",
+    "width_m": null,
+    "width_note": null,
+    "cause_note": "Heavy monsoon rains and poor maintenance (Wikipedia 2008 Bihar flood). SSVK report attributes it to Water Resources Dept neglect (search summary).",
+    "prior_warning_signs": "Not established in sources read. Dinesh Kumar Mishra (EPW, 2008, per search summary) called it the 8th incident of its kind.",
+    "impact_notes": "Water passed ~3,675 m3/s per Wikipedia. Casualty figures conflict: 434 deaths (Wikipedia infobox, Govt of Bihar DDM report); 250 (Wikipedia body, ABC News 29 Aug 2008); 493 / 587 (search summary). ~53,800 people affected in Sunsari District Nepal (Wikipedia, UN OCHA May 2009). Search summary: course shift ~100 km east (Supaul situation report, unverified).",
+    "sources": [
+     "https://en.wikipedia.org/wiki/2008_Bihar_flood (fetched: 18 Aug 2008, Kusaha VDC, Sunsari, heavy rain + poor maintenance, casualty figures)",
+     "https://ssvk.org/koshi/analytical_articles/Kosi_flooding.pdf (search result only, not fetched)",
+     "https://www.downtoearth.org.in/water/eighteen-years-after-kosi-breach-flood-victims-still-await-compensation-and-rehabilitation (search result only; rehabilitation lag: 12,500 of 100,000 houses by Feb 2014 per search summary)"
+    ],
+    "in_aoi": false,
+    "used_in_backtest": false,
+    "unconfirmed": false
+   }
+  }
+ ]
+}

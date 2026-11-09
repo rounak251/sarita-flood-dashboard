@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SARITA · Flood Mapping Dashboard</title>
+  <meta name="description" content="SARITA: SAR-based Inundation Tracking and Analytics. Sentinel-1 deep-learning flood mapping and the 2024 Kosi flood case study (North Bihar).">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1F33'/%3E%3Cpath d='M4 13c4-4 8 4 12 0s8 4 12 0' stroke='%230E7C86' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M4 20c4-4 8 4 12 0s8 4 12 0' stroke='%232B6CB0' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bandh.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#map" aria-label="SARITA home">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" rx="7" fill="#12304D"/>
+      <path d="M4 13c4-4 8 4 12 0s8 4 12 0" stroke="#3FB6BF" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M4 20c4-4 8 4 12 0s8 4 12 0" stroke="#6EA4E0" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span class="brand-text">
+      <span class="brand-name">SARITA</span>
+      <span class="brand-sub">SAR-based Inundation Tracking &amp; Analytics</span>
+    </span>
+  </a>
+  <nav class="tabs" aria-label="Pages">
+    <a href="#map" data-page="map">Flood Map · Kosi 2024</a>
+    <a href="#lab" data-page="lab">Model Lab</a>
+    <a href="#results" data-page="results">Results</a>
+    <a href="#bandh" data-page="bandh">Embankment Watch</a>
+    <a href="#about" data-page="about">About</a>
+  </nav>
+  <div class="status-pill" id="apiStatus" title="SARITA API status">
+    <span class="dot"></span><span class="txt">Checking API…</span>
+  </div>
+</header>
+
+<div id="banner" class="banner" hidden></div>
+
+<main>
+  <!-- ================================================================ MAP -->
+  <section class="page" id="page-map" data-page="map" hidden>
+    <div class="map-layout">
+      <div class="map-col">
+        <div class="card toolbar">
+          <div class="toolbar-head">
+            <div>
+              <h1 class="page-title">2024 Kosi floods, North Bihar</h1>
+              <p class="page-sub" id="mapSub">Sentinel-1 radar flood maps from the SARITA model</p>
+            </div>
+            <div class="date-bar" id="dateBar" role="tablist" aria-label="Acquisition date"></div>
+          </div>
+          <div class="toolbar-row">
+            <div class="layer-toggles" id="layerToggles"></div>
+            <div class="sliders">
+              <label class="slider">Overlays <input type="range" id="opOverlay" min="0" max="100" value="85"></label>
+              <label class="slider">Radar <input type="range" id="opSar" min="0" max="100" value="90"></label>
+              <label class="select-inline">Basemap
+                <select id="basemap">
+                  <option value="osm">OpenStreetMap</option>
+                  <option value="none">Plain</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="hint" id="mapHint" hidden></div>
+        </div>
+        <div class="map-wrap card">
+          <div id="leafletMap" class="map" role="region" aria-label="Flood map"></div>
+          <div class="map-msg" id="mapMsg" hidden></div>
+        </div>
+      </div>
+
+      <aside class="side-col">
+        <div class="card">
+          <div class="card-head">
+            <h2 id="kpiTitle">Selected date</h2>
+            <span class="tag" id="kpiTag"></span>
+          </div>
+          <div class="kpis" id="kpis"></div>
+          <p class="fine" id="kpiNote"></p>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>Flood extent over time</h2></div>
+          <div class="chart-box" style="height:210px"><canvas id="chartSeries"></canvas></div>
+          <p class="fine">Bars: new (flood) water against the pre-flood reference. Lines: all water detected by the model. Click a bar to select the date.</p>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>Most affected districts</h2><span class="tag muted" id="topTag"></span></div>
+          <div class="chart-box" style="height:250px"><canvas id="chartTop"></canvas></div>
+          <div class="empty" id="topEmpty" hidden></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="grid-2 lower">
+      <div class="card">
+        <div class="card-head">
+          <h2>District statistics</h2>
+          <span class="tag muted" id="tableTag"></span>
+        </div>
+        <div class="table-scroll">
+          <table class="data sortable" id="distTable">
+            <thead></thead><tbody></tbody><tfoot></tfoot>
+          </table>
+        </div>
+        <p class="fine" id="tableNote"></p>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="card-head"><h2>Flood bulletin generator</h2><span class="tag muted">offline · template-based</span></div>
+          <form class="bulletin-form" id="bulletinForm">
+            <label>District
+              <select id="bDistrict"></select>
+            </label>
+            <label>Date
+              <select id="bDate"></select>
+            </label>
+            <div class="seg" role="radiogroup" aria-label="Language">
+              <button type="button" class="seg-btn active" data-lang="en">English</button>
+              <button type="button" class="seg-btn" data-lang="hi" lang="hi">हिन्दी</button>
+            </div>
+            <button type="submit" class="btn primary" id="bGo">Generate bulletin</button>
+          </form>
+          <div class="bulletin-out" id="bulletinOut" hidden>
+            <div class="bulletin-actions">
+              <button type="button" class="btn small" id="bCopy">Copy</button>
+              <button type="button" class="btn small ghost" id="bSave">Download .txt</button>
+            </div>
+            <pre id="bulletinText"></pre>
+          </div>
+          <div class="msg" id="bulletinMsg" hidden></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>Method</h2></div>
+          <div class="method" id="methodNote"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ LAB -->
+  <section class="page" id="page-lab" data-page="lab" hidden>
+    <div class="page-head">
+      <div>
+        <h1 class="page-title">Model Lab</h1>
+        <p class="page-sub">Sen1Floods11 benchmark chips (512 × 512 px at 10 m). Every chip here was held out from training. <span id="labModel"></span></p>
+      </div>
+    </div>
+    <div class="lab-layout">
+      <div class="card gallery-card">
+        <div class="filters">
+          <label>Split
+            <select id="fSplit">
+              <option value="">All</option>
+              <option value="test">Test</option>
+              <option value="bolivia">Bolivia (unseen event)</option>
+            </select>
+          </label>
+          <label>Event <select id="fEvent"><option value="">All events</option></select></label>
+          <label>Sort
+            <select id="fSort">
+              <option value="iou-desc">IoU, high → low</option>
+              <option value="iou-asc">IoU, low → high</option>
+              <option value="water-desc">Water fraction</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+        <div class="gallery-count fine" id="galleryCount"></div>
+        <div class="gallery" id="gallery"></div>
+        <div class="msg" id="galleryMsg" hidden></div>
+      </div>
+
+      <div class="stack">
+        <div class="card viewer-card">
+          <div class="card-head">
+            <div>
+              <h2 id="vTitle">Select a chip</h2>
+              <div class="fine" id="vSub"></div>
+            </div>
+            <div class="viewer-actions">
+              <label class="check"><input type="checkbox" id="vTta" checked> 8-view TTA</label>
+              <button class="btn primary" id="vLive" disabled>Run model live</button>
+            </div>
+          </div>
+          <div class="metric-row" id="vMetrics"></div>
+          <div class="panels" id="vPanels"></div>
+          <div class="live-status" id="vStatus" hidden></div>
+          <div class="legend-row" id="vLegend"></div>
+          <form class="chip-input" id="chipForm">
+            <label>Any chip id
+              <input id="chipName" list="chipList" placeholder="e.g. Bolivia_103757 or India_1018327" autocomplete="off" spellcheck="false">
+            </label>
+            <datalist id="chipList"></datalist>
+            <button class="btn" type="submit">Run live</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2>Upload a Sentinel-1 GeoTIFF</h2>
+            <span class="tag muted">2 bands: VV, VH in dB · up to 2048 × 2048 px</span>
+          </div>
+          <form id="uploadForm">
+            <label class="drop" id="drop">
+              <input type="file" id="upFile" accept=".tif,.tiff,image/tiff">
+              <span class="drop-text" id="dropText"><strong>Choose a file</strong> or drag it here</span>
+            </label>
+            <div class="upload-actions">
+              <label class="check"><input type="checkbox" id="upTta" checked> 8-view TTA</label>
+              <button class="btn primary" type="submit" id="upGo" disabled>Run model</button>
+            </div>
+          </form>
+          <div class="msg" id="upMsg" hidden></div>
+          <div id="upResult" hidden>
+            <div class="metric-row" id="upStats"></div>
+            <div class="panels four" id="upPanels"></div>
+            <ul class="warnings" id="upWarn"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ RESULTS -->
+  <section class="page" id="page-results" data-page="results" hidden>
+    <div class="page-head">
+      <div>
+        <h1 class="page-title">Experimental results</h1>
+        <p class="page-sub" id="resProtocol">Sen1Floods11 hand-labelled test split and the held-out Bolivia flood event.</p>
+      </div>
+    </div>
+    <div class="msg" id="resMsg" hidden></div>
+    <div id="resBody">
+      <div class="kpis wide" id="resKpis"></div>
+
+      <div class="card">
+        <div class="card-head"><h2>All methods</h2><span class="tag muted">best per column highlighted</span></div>
+        <div class="table-scroll">
+          <table class="data" id="expTable"><thead></thead><tbody></tbody></table>
+        </div>
+        <p class="fine" id="expNote"></p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-head"><h2>Water IoU by method</h2></div>
+          <div class="chart-box" id="cmpBox" style="height:380px"><canvas id="chartCompare"></canvas></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>Ablations</h2><span class="tag muted">change vs the main model</span></div>
+          <div class="table-scroll">
+            <table class="data" id="ablTable"><thead></thead><tbody></tbody></table>
+          </div>
+          <div class="empty" id="ablEmpty" hidden>No ablation runs have been exported yet.</div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-head"><h2>Calibration</h2><span class="tag muted">reliability, test split</span></div>
+          <div class="chart-box" style="height:250px"><canvas id="chartRel"></canvas></div>
+          <div class="kv" id="calNumbers"></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>Knowing when it is wrong</h2><span class="tag muted">risk vs coverage</span></div>
+          <div class="chart-box" style="height:250px"><canvas id="chartRisk"></canvas></div>
+          <p class="fine">Pixels are ranked by predictive entropy and the most uncertain ones are referred to an analyst. Error rate of the pixels the model keeps, at each coverage level.</p>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>Training</h2><span class="tag muted">validation IoU per epoch</span></div>
+          <div class="chart-box" style="height:250px"><canvas id="chartTrain"></canvas></div>
+          <div class="kv" id="trainNumbers"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Per-event IoU</h2><span class="tag muted">test events, then the unseen Bolivia event</span></div>
+        <div class="table-scroll"><table class="data heat" id="eventTable"><thead></thead><tbody></tbody></table></div>
+      </div>
+
+      <div class="card" id="seedCard" hidden>
+        <div class="card-head"><h2>Seed variation</h2><span class="tag muted">mean ± standard deviation</span></div>
+        <div class="table-scroll"><table class="data" id="seedTable"><thead></thead><tbody></tbody></table></div>
+      </div>
+
+      <div class="card" id="figCard" hidden>
+        <div class="card-head"><h2>Figures</h2><span class="tag muted">click to enlarge</span></div>
+        <div class="fig-grid" id="figGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ ABOUT -->
+  <section class="page" id="page-about" data-page="about" hidden>
+    <div class="page-head">
+      <div>
+        <h1 class="page-title">About SARITA</h1>
+        <p class="page-sub"><em lang="hi">सरिता</em> (saritā) means “river”. SAR-based Inundation Tracking &amp; Analytics.</p>
+      </div>
+    </div>
+    <div class="grid-2 about">
+      <div class="card prose">
+        <h2>The problem</h2>
+        <p>Bihar is India's most flood-prone state. Every monsoon the Kosi, the river known as the “Sorrow of Bihar”, and its neighbours flood North Bihar.
+          In late September 2024 heavy rain in Nepal pushed the Kosi barrage at Birpur to its highest discharge in decades, and embankments breached in several districts.</p>
+        <p>Relief agencies need to know <strong>where</strong> the water is, <strong>how much</strong> land and <strong>how many people</strong> are affected, and how this changes from day to day.
+          Optical satellites cannot see the ground through monsoon cloud. <strong>Synthetic-aperture radar (SAR)</strong> can: Sentinel-1 images the ground day and night through cloud, and calm water shows up dark because it reflects the radar pulse away from the sensor.</p>
+        <h2>What SARITA does</h2>
+        <ul>
+          <li>A U-Net with an ImageNet-pretrained ResNet-34 encoder segments water in Sentinel-1 VV/VH backscatter. It is trained on the hand-labelled Sen1Floods11 benchmark and compared with classical thresholding and machine-learning baselines.</li>
+          <li><strong>Uncertainty:</strong> test-time augmentation, MC dropout, calibration (ECE, temperature scaling) and risk–coverage analysis show when the model should not be trusted.</li>
+          <li><strong>Case study:</strong> whole-scene inference over the Kosi–Mithila region (≈21,500 km²) on every Sentinel-1 pass from 15 September to 2 November 2024. Flooding is measured against the pre-flood image and JRC permanent water.</li>
+          <li><strong>Impact:</strong> flooded cropland and built-up area from ESA WorldCover and people exposed from WorldPop, aggregated per district. English/Hindi bulletins are generated offline.</li>
+        </ul>
+        <p class="fine">All estimates on this dashboard are satellite-based and meant for planning. They are not official figures.</p>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <h2>Pipeline</h2>
+          <div class="pipeline" id="pipeline">
+            <svg viewBox="0 0 620 430" role="img" aria-label="SARITA pipeline diagram">
+              <defs>
+                <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#5B6B7A"/>
+                </marker>
+              </defs>
+              <g font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13">
+                <!-- training branch -->
+                <rect x="10" y="14" width="180" height="58" rx="9" fill="#EEF4F8" stroke="#2B6CB0"/>
+                <text x="100" y="38" text-anchor="middle" font-weight="600" fill="#0B1F33">Sen1Floods11</text>
+                <text x="100" y="56" text-anchor="middle" fill="#5B6B7A" font-size="11.5">446 hand-labelled chips</text>
+                <rect x="220" y="14" width="180" height="58" rx="9" fill="#EEF4F8" stroke="#2B6CB0"/>
+                <text x="310" y="38" text-anchor="middle" font-weight="600" fill="#0B1F33">Training</text>
+                <text x="310" y="56" text-anchor="middle" fill="#5B6B7A" font-size="11.5">BCE + Dice, EMA, augmentation</text>
+                <line x1="190" y1="43" x2="218" y2="43" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <line x1="400" y1="43" x2="452" y2="43" stroke="#5B6B7A" stroke-width="1.6"/>
+                <line x1="452" y1="43" x2="452" y2="140" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <!-- inference chain -->
+                <rect x="10" y="114" width="180" height="58" rx="9" fill="#fff" stroke="#0B1F33"/>
+                <text x="100" y="138" text-anchor="middle" font-weight="600" fill="#0B1F33">Sentinel-1 SAR</text>
+                <text x="100" y="156" text-anchor="middle" fill="#5B6B7A" font-size="11.5">VV, VH · RTC · every 12 days</text>
+                <rect x="220" y="114" width="180" height="58" rx="9" fill="#fff" stroke="#0B1F33"/>
+                <text x="310" y="138" text-anchor="middle" font-weight="600" fill="#0B1F33">Pre-processing</text>
+                <text x="310" y="156" text-anchor="middle" fill="#5B6B7A" font-size="11.5">dB, mosaic, 10 m UTM grid</text>
+                <rect x="430" y="114" width="180" height="58" rx="9" fill="#E7F4F4" stroke="#0E7C86" stroke-width="1.8"/>
+                <text x="520" y="138" text-anchor="middle" font-weight="700" fill="#0E7C86">U-Net · ResNet-34</text>
+                <text x="520" y="156" text-anchor="middle" fill="#5B6B7A" font-size="11.5">tiled, 8-view TTA</text>
+                <line x1="190" y1="143" x2="218" y2="143" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <line x1="400" y1="143" x2="428" y2="143" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <line x1="520" y1="172" x2="520" y2="210" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <rect x="430" y="212" width="180" height="58" rx="9" fill="#fff" stroke="#0B1F33"/>
+                <text x="520" y="236" text-anchor="middle" font-weight="600" fill="#0B1F33">Water + uncertainty</text>
+                <text x="520" y="254" text-anchor="middle" fill="#5B6B7A" font-size="11.5">probability, entropy</text>
+                <line x1="430" y1="241" x2="402" y2="241" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <rect x="220" y="212" width="180" height="58" rx="9" fill="#FDF0EB" stroke="#E4572E" stroke-width="1.8"/>
+                <text x="310" y="236" text-anchor="middle" font-weight="700" fill="#C2441F">Change detection</text>
+                <text x="310" y="254" text-anchor="middle" fill="#5B6B7A" font-size="11.5">vs 27 Sep + JRC permanent</text>
+                <line x1="220" y1="241" x2="192" y2="241" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <rect x="10" y="212" width="180" height="58" rx="9" fill="#fff" stroke="#0B1F33"/>
+                <text x="100" y="236" text-anchor="middle" font-weight="600" fill="#0B1F33">Impact analytics</text>
+                <text x="100" y="254" text-anchor="middle" fill="#5B6B7A" font-size="11.5">cropland · built-up · people</text>
+                <line x1="100" y1="270" x2="100" y2="308" stroke="#5B6B7A" stroke-width="1.6" marker-end="url(#arr)"/>
+                <rect x="10" y="310" width="600" height="58" rx="9" fill="#0B1F33"/>
+                <text x="310" y="334" text-anchor="middle" font-weight="700" fill="#fff">Dashboard · district tables · English / हिन्दी bulletins</text>
+                <text x="310" y="352" text-anchor="middle" fill="#B9C6D3" font-size="11.5">FastAPI + Leaflet, runs fully offline on a laptop</text>
+                <text x="10" y="400" fill="#5B6B7A" font-size="11.5">Ancillary layers: ESA WorldCover 2021 · WorldPop 2020 · JRC Global Surface Water · geoBoundaries districts</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Headline numbers</h2>
+          <div class="kv" id="aboutNumbers"><span class="fine">Loading…</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2 about">
+      <div class="card prose">
+        <h2>Data sources and licences</h2>
+        <table class="data compact sources">
+          <tbody>
+            <tr><th>Sentinel-1 SAR</th><td>Copernicus Sentinel-1 (ESA), radiometrically terrain-corrected by Microsoft Planetary Computer. Contains modified Copernicus Sentinel data 2024.</td></tr>
+            <tr><th>Training data</th><td>Sen1Floods11 hand-labelled chips (Bonafilia et al., CVPR Workshops 2020), CC BY 4.0.</td></tr>
+            <tr><th>Permanent water</th><td>JRC Global Surface Water v1.3 occurrence (Pekel et al., Nature 2016), © EC JRC / Google.</td></tr>
+            <tr><th>Land cover</th><td>ESA WorldCover 10 m 2021 v200, CC BY 4.0.</td></tr>
+            <tr><th>Population</th><td>WorldPop 2020 UN-adjusted 1 km, CC BY 4.0.</td></tr>
+            <tr><th>Districts</th><td>geoBoundaries gbOpen IND ADM2 (Runfola et al., 2020), ODbL 1.0.</td></tr>
+            <tr><th>Basemap</th><td>© OpenStreetMap contributors, ODbL. Optional: the dashboard works offline without it.</td></tr>
+            <tr><th>Software</th><td>PyTorch, timm, rasterio/GDAL, FastAPI, Leaflet 1.9.4 (BSD-2), Chart.js 4.4.9 (MIT).</td></tr>
+          </tbody>
+        </table>
+        <div class="fine" id="aboutSources"></div>
+      </div>
+      <div class="card prose">
+        <h2>Project</h2>
+        <table class="data compact">
+          <tbody>
+            <tr><th>Student</th><td>Rounak Choudhary</td></tr>
+            <tr><th>Roll No.</th><td>2447048 (Section 3)</td></tr>
+            <tr><th>Guide</th><td><span class="ph">[Guide Name]</span>, Department of CSE</td></tr>
+            <tr><th>Course</th><td>CS060603 Project, CSE Dual Degree (B.Tech + M.Tech, Cyber Security), 6th semester, session 2026–27</td></tr>
+            <tr><th>Institute</th><td>Department of Computer Science and Engineering, National Institute of Technology Patna</td></tr>
+          </tbody>
+        </table>
+        <h2>Run it</h2>
+        <pre class="code">.venv/bin/uvicorn sarita.api:app --port 8000
+# open http://localhost:8000   ·   API docs at /docs</pre>
+      </div>
+    </div>
+  </section>
+  <!-- ================================================================ EMBANKMENT WATCH (bandh) -->
+  <section class="page" id="page-bandh" data-page="bandh" hidden>
+    <div id="bandhRoot"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>SARITA · CSE Dual Degree (Cyber Security) project, NIT Patna</span>
+  <span>Contains modified Copernicus Sentinel data 2024 · Satellite-based estimates for planning, not official figures</span>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <img alt="">
+  <div class="lightbox-cap"></div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<noscript><div class="banner warn">The SARITA dashboard needs JavaScript.</div></noscript>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="vendor/chartjs/chart.umd.js"></script>
+<script src="js/util.js"></script>
+<script src="js/api.js"></script>
+<script src="js/map.js"></script>
+<script src="js/lab.js"></script>
+<script src="js/results.js"></script>
+<script src="js/bandh.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
